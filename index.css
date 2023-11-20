@@ -71,5 +71,7 @@
       display: block;
     }
     img{
-      width: 45%;
+      width: 30%;
+      border: solid;
+      border-color: red;
     }
