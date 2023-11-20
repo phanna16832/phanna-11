@@ -75,3 +75,12 @@
       border: solid;
       border-color: red;
     }
+    .label{
+      width: 130px;
+    }/*易碎品标签*/
+    .broke {
+      color: red;
+    }   /*易碎品备注*/
+    .bouble{
+      width: 290px;
+    } /*泡沫*/
