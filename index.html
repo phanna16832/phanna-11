@@ -3,115 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
   <style>
-    /* Basic styling for the navigation bar */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      overflow: auto;
-    }
-    h1 {
-        color: #042ed6;
-        font-size: larger;
-        text-align: center;
-    }
-    nav {
-      background-color: #333;
-      overflow: hidden;
-    }
+    /* Dropdown Button */
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
 
-    nav a {
-      float: left;
-      display: block;
-      color: pink;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
 
-    nav a:hover {
-      background-color: #042ed6;
-      color: black;
-    }
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
-    /* Styling for the dropdown content */
-    .dropdown {
-      float: left;
-      overflow: hidden;
-    }
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
 
-    .dropdown .dropbtn {
-      font-size: 16px;  
-      border: none;
-      outline: none;
-      color: rgb(3, 37, 255);
-      padding: 14px 16px;
-      background-color: inherit;
-      font-family: inherit;
-      margin: 0;
-    }
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-      z-index: 1;
-    }
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
 
-    .dropdown-content a {
-      float: none;
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      text-align: left;
-    }
-
-    .dropdown-content a:hover {
-      background-color: pink;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-  </style>
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+    </style>
+    
 </head>
 <body>
-    <h1>Phanna save replies</h1>
-<nav>
-  <a href="https://www.notion.so/Phanna-s-save-replies-12ee8f603df04731bdfb72bcc9f4454e" target="_blank">Phanna save reply in NOTION</a>
-  <div class="dropdown">
-    <button class="dropbtn">Phanna Report</button>
-    <div class="dropdown-content">
-      <a href="https://docs.google.com/spreadsheets/d/1N331vNvTQPqhFt07I-UeBkTPusGNnM1x9pPehghmTXs/edit#gid=0&fvid=851391132" target="_blank">11 Tracking report</a>
-      <a href="https://docs.google.com/spreadsheets/d/1N8eHwElTht6C4j9zcHmaLkHB0qgtYqPmpKu_dhTpuFk/edit#gid=311748528" target="_blank">10 tracking report</a>
-      <a href="https://docs.google.com/spreadsheets/d/13BDA9q3bSlzKZ9LQKOKJcNVrW7JSzdXXqjqlCMr50Gk/edit#gid=498463738" target="_blank">Recheck Nov shipment</a>
-      <a href="https://docs.google.com/spreadsheets/d/1-MV14kLqsMq8GLcr15E-wx0g-PiCujgCyriMCVipcHU/edit#gid=0" target="_blank">Dec Tracking report</a>
-    </div>
-    </div>
-  <a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E6%9F%A5%E8%AF%A2%E5%BF%AB%E9%80%92%E5%8D%95%E5%8F%B7&fenlei=256&oq=%25E7%2599%25BE%25E5%25BA%25A6%25E6%259F%25A5%25E8%25AF%25A2%25E5%258C%2585%25E8%25A3%25B9&rsv_pq=b5b2f8e7000c0386&rsv_t=fbbcH0lbob1QMHLM%2F9NHUZFD3Y58RZ4WZsPAlduYOk67sC7Mcwj2SWIMlH4&rqlang=cn&rsv_dl=tb&rsv_enter=1&rsv_btype=t&inputT=10082&rsv_sug3=25&rsv_sug1=20&rsv_sug7=101&rsv_sug2=0&rsv_sug4=10100&rsv_sug=1" target="_blank">百度查询包裹</a>
-</nav>
-<div class="dropdown">
-  <button class="dropbtn"> Other save replies</button>
-  <div class="dropdown-content">
-    <a href="1.html">Telegram save replies</a>
-    <a href="ccsl.html">Contact with CCsl save replies</a>
-  </div><br><br>
-
-  <h6><b><u>facebook replies comment</u></b></h6>
- <pre>
-  សួស្តីបង 
-  ពត៌មានរបៀបប្រើសេវាជួយទិញទំនិញដោយឥតគិតថ្លៃ : https://shorturl.at/pqQW6
-  Join Telegram Group ជួយទិញ: https://t.me/+CyEdYOtceZkwZjQ1
-  បងសូមចុចចុះឈ្មោះតាមលីងនេះសិនមកបង
-  https://m.ceccsl.com/reg/khmindex?tj
-  Telegram ក្រុមការងារបញ្ជាទិញ : https://t.me/CE_EXPRESS
-  
-  *សំរាប់ការការបង្រៀនទិញបងអាចទាក់ទងតេឡេក្រាមខាងក្រោមបាន 
-  https://t.me/+zaVpyk9lVlI2YmU1
-  ជួយទិញ និង បង្រៀនទិញទំនិញពីប្រទេសចិនដោយឥតគិតថ្លៃ ជាមួយក្រុមហ៊ុនស៊ីអ៊ី </pre>
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <script>
+      /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }</script>
 </body>
 </html>
- 
