@@ -39,43 +39,51 @@
       float: left;
       overflow: hidden;
     }
+      /* Dropdown Button */
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
 
-    .dropdown .dropbtn {
-      font-size: 16px;  
-      border: none;
-      outline: none;
-      color: rgb(3, 37, 255);
-      padding: 14px 16px;
-      background-color: inherit;
-      font-family: inherit;
-      margin: 0;
-    }
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-      z-index: 1;
-    }
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
-    .dropdown-content a {
-      float: none;
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      text-align: left;
-    }
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
 
-    .dropdown-content a:hover {
-      background-color: pink;
-    }
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
 
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
   </style>
 </head>
 <body>
@@ -94,11 +102,33 @@
   <a href="baidu.com/from=844b/s?word=查快递单号&sa=tb&ts=9345985&t_kt=0&ie=utf-8&rsv_t=d1888V5Jg3l72e4PIF0dEHxXOzEuD%252BlnvKW2z6cBUGyvYQYt4AvBqZ8LfA&ms=1&rsv_pq=9068959970858437266&ss=100&sugid=272922219013106&rqlang=&rsv_sug4=4035&inputT=2798&oq=查快递" target="_blank">百度查询包裹</a>
 </nav>
 <div class="dropdown">
-  <button class="dropbtn"> Other save replies</button>
-  <div class="dropdown-content">
-    <a href="1.html">Telegram save replies</a>
-    <a href="ccsl.html">Contact with CCsl save replies</a>
+  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="ccsl.html"> Save reply with ccsl</a>
+    <a href="1.html"> Save reply in facebook</a>
+    <a href="#">Link 3</a>
   </div>
+</div>
+<script>
+  /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }</script>
 </body>
 </html>
  
