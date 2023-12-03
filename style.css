@@ -1,3 +1,6 @@
+body{
+  font-family: "Siemreap";
+}
 /* Navbar container */
 .navbar {
   overflow: hidden;
