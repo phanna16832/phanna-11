@@ -13,14 +13,14 @@ body {
 .nav-item {
     float: left;
     display: block;
-    color: rgb(255, 255, 255)55, 255, 255);
+    color: pink;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
   
   .nav-item:hover {
-    background-color: #ddd;
+    background-color: blue;
     color: black;
   }
 
