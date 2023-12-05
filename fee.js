@@ -6,17 +6,21 @@ function calculateLandFee() {
 
     var volume = (w * h * l) / 6000;
 
-    var fee, fee1, notification;
+    var fee, fee1, fly, fly1, notification;
 
     if (!isNaN(weight) && weight > 0 && weight >= volume) {
         // Calculate fee based on weight
         fee = weight * 1.5;
         fee1 = weight * 2;
+        fly = weight * 7;  // Corrected calculation for fly
+        fly1 = weight * 8; // Corrected calculation for fly1
         notification = "Weight: " + weight.toFixed(2) + " KG";
     } else {
         // Calculate fee based on volume
         fee = volume * 1.5;
         fee1 = volume * 2;
+        fly1 = volume * 8;
+        fly - volume * 7;
         notification = "Volume: " + volume.toFixed(2) + " KG";
     }
 
@@ -29,28 +33,15 @@ function calculateLandFee() {
 
     // Display notification
     document.getElementById("notify").innerText = "Calculation based on " + notification;
+
+    // Display additional fees
+    document.getElementById("fly").value = "USD " + (fly).toFixed(2);
+    document.getElementById("fly1").value = "USD " + (fly1).toFixed(2);
 }
-// Add event listener to each input field
-document.getElementById("weight").addEventListener("keyup", function(event) {
-    if (event.key === "Enter") {
-        document.getElementById("height").focus();
-    }
-});
-
-document.getElementById("height").addEventListener("keyup", function(event) {
-    if (event.key === "Enter") {
-        document.getElementById("width").focus();
-    }
-});
-
-document.getElementById("width").addEventListener("keyup", function(event) {
-    if (event.key === "Enter") {
-        document.getElementById("length").focus();
-    }
-});
 
 document.getElementById("length").addEventListener("keyup", function(event) {
     if (event.key === "Enter") {
         calculateLandFee();
+        document.getElementById("order").focus();
     }
 });

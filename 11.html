@@ -7,34 +7,49 @@
   <link rel="stylesheet" href="frieght.css">
 </head>
 <body>
-  <h1><u>Calculate land transportation fee</u></h1>
   <!--nav bar-->
-  div class="navbar">
+  <div class="navbar">
+    <h1><u>Calculate land transportation fee</u></h1>
   <a href="index.html" class="nav-item">home</a>
   <a href="1.html" class="nav-item">Save reply in fb</a>
   <a href="ccsl.html" class="nav-item">Save reply with ccsl</a>
-</div>
+</div><br>
 
   <div id="calculation">
     <label>ទម្ងង់ជាក់ស្តែងនៃទំនិញ</label>
     <input type="number" placeholder="weight" id="weight"> <!-- Added id="weight" -->
+    
     <label> កម្ពស់ ខ្នាតជា(cm)：</label>
     <input type="number" placeholder="高" id="height"><br><br>
+   
     <label> បណ្តោយ​​ ខ្នាតជា(cm) :</label>
     <input type="number" placeholder="宽" id="width"><br><br>
+    
     <label> ទទឹង ខ្នាតជា(cm) :</label>
     <input type="number" placeholder="长" id="length"><br><br>
     <button onclick="calculateLandFee()">Calculate</button>
+    
     <label>Volume:</label>
     <span id="volume"></span><br><br>
     <!-- notify the user-->
+    
     <label>so we calculate base on</label>
     <span id="notify"></span>
-    <label>ការប៉ានស្មានថ្លៃដឹកជញ្ជូននៅទីក្រុងភ្នំពេញ :</label>
+    
+    <label>ការប៉ានស្មានថ្លៃដឹកជញ្ជូននៅទីក្រុងភ្នំពេញ (តាមផ្លូវគោក) :</label>
     <input type="text" id="fee" readonly><br><br>
-    <label>ការប៉ានស្មានថ្លៃដឹកជញ្ជូននៅតាមបណ្តាលខេត្ត​ :</label>
+    
+    <label>ការប៉ានស្មានថ្លៃដឹកជញ្ជូននៅតាមបណ្តាលខេត្ត​ (តាមផ្លូវគោក) :</label>
     <input type="text" id="fee1" readonly>
-  </div>
+    <!--ថ្លៃដឹកតាមផ្លូវអាកាស-->
+    <label>ការប៉ានស្មានថ្លៃដឹកជញ្ជូននៅទីក្រុងភ្នំពេញ (តាមផ្លូវអាកាស) :</label>
+    <input type="text" id="fly" readonly>
+    <span>(តាមផ្លូវអាកាស)</span>
+    
+    <label>ការប៉ានស្មានថ្លៃដឹកជញ្ជូននៅតាមបណ្តាលខេត្ត (តាមផ្លូវអាកាស) :</label>
+    <input type="text" id="fly1" readonly>
+    <span>(តាមផ្លូវអាកាស)</span>
+    <!-- ... (other HTML code) ... --></div>
   <script src="fee.js"></script>
 </body>
 </html>
