@@ -3,53 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Land fee</title>
-  <link rel="stylesheet" href="frieght.css">
+  <title>Prediction Fee</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!--nav bar-->
-  <div class="navbar">
-    <h1><u>Calculate land transportation fee</u></h1>
-  <a href="index.html" class="nav-item">home</a>
-  <a href="1.html" class="nav-item">Save reply in fb</a>
-  <a href="ccsl.html" class="nav-item">Save reply with ccsl</a>
-</div><br>
+  <header>
+    <h1>Website Header</h1>
+  </header>
 
-  <div id="calculation">
-    <label>ទម្ងង់ជាក់ស្តែងនៃទំនិញ</label>
-    <input type="number" placeholder="weight" id="weight"> <!-- Added id="weight" -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#">Save Reply in Facebook</a>
+    <a href="#">Save Reply in Telegram</a> 
+    <a href="#">Save Reply with CCSL</a> 
+  </nav>
+  <br>
+  <div class="form">
+    <label>ទម្ងន់នៃទំនិញ</label>
+    <input type="number" placeholder="ទម្ងន់ជាក់ស្តែង" id="weight"><br><br>
+
+    <label>បណ្តោយ (cm)</label>
+    <input type="number" id="width"><br><br>
     
-    <label> កម្ពស់ ខ្នាតជា(cm)：</label>
-    <input type="number" placeholder="高" id="height"><br><br>
-   
-    <label> បណ្តោយ​​ ខ្នាតជា(cm) :</label>
-    <input type="number" placeholder="宽" id="width"><br><br>
+    <label>ទទឹង (cm)</label>
+    <input type="number"  id="length"><br><br>
     
-    <label> ទទឹង ខ្នាតជា(cm) :</label>
-    <input type="number" placeholder="长" id="length"><br><br>
-    <button onclick="calculateLandFee()">Calculate</button>
+    <label>កម្ពស់ (cm)</label>
+    <input type="number" id="height"><br><br>
+
+    <button onclick="calculateLandFee()">គណនា</button><br>
     
-    <label>Volume:</label>
-    <span id="volume"></span><br><br>
-    <!-- notify the user-->
-    
-    <label>so we calculate base on</label>
-    <span id="notify"></span>
-    
-    <label>ការប៉ានស្មានថ្លៃដឹកជញ្ជូននៅទីក្រុងភ្នំពេញ (តាមផ្លូវគោក) :</label>
-    <input type="text" id="fee" readonly><br><br>
-    
-    <label>ការប៉ានស្មានថ្លៃដឹកជញ្ជូននៅតាមបណ្តាលខេត្ត​ (តាមផ្លូវគោក) :</label>
-    <input type="text" id="fee1" readonly>
-    <!--ថ្លៃដឹកតាមផ្លូវអាកាស-->
-    <label>ការប៉ានស្មានថ្លៃដឹកជញ្ជូននៅទីក្រុងភ្នំពេញ (តាមផ្លូវអាកាស) :</label>
-    <input type="text" id="fly" readonly>
-    <span>(តាមផ្លូវអាកាស)</span>
-    
-    <label>ការប៉ានស្មានថ្លៃដឹកជញ្ជូននៅតាមបណ្តាលខេត្ត (តាមផ្លូវអាកាស) :</label>
-    <input type="text" id="fly1" readonly>
-    <span>(តាមផ្លូវអាកាស)</span>
-    <!-- ... (other HTML code) ... --></div>
-  <script src="fee.js"></script>
+    <label>ទំហំមាឌ</label>
+    <span id="volume"></span><br>
+<!---notification-->
+    <span id="notify"></span><br>
+    <!--land fee-->
+    <label>ថ្លៃដឹកជញ្ជូននៅទីក្រុងភ្នំពេញ (តាមផ្លូវគោក)</label>
+    <span id="fee"></span><br>
+<!--land--fee--->
+    <label>ថ្លៃដឹកជញ្ជូននៅតាមបណ្តាលខេត្ត (តាមផ្លូវគោក)</label>
+    <span id="fee1"></span><br>
+
+    <label>ថ្លៃដឹកជញ្ជូននៅទីក្រុងភ្នំពេញ (តាមផ្លូវអាកាស)</label>
+    <span id="fly"></span><br>
+<!--fly--fee--->
+    <label>ថ្លៃដឹកជញ្ជូននៅតាមបណ្តាលខេត្ត (តាមផ្លូវអាកាស)</label>
+    <span id="fly1"></span><br>
+  </div>
+<script src="fee.js"></script> <!-- Replace "your-script.js" with the actual path to your JavaScript file -->
+  
+<footer>
+    <p>Copyright © 2023 Your Company</p>
+  </footer>
 </body>
 </html>
