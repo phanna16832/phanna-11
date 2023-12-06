@@ -1,28 +1,73 @@
- nav {
-      background-color: pink;
-      overflow: hidden;
-    }
-    
-    nav a {
-      float: left;
-      display: block;
-      color: grey;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      margin-right: 10px; /* Add a bit of right margin for spacing */
-      font-weight: bold;
-    }
-    
-    nav a:hover {
-      background-color: blueviolet;
-    }
-    .form{
-        border-style: outset;
-        border-color: red;
-    }
-    .form button {
-        color:crimson;
-        border-style: none;
-        background-color: aquamarine;
-    }
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+nav {
+  background-color: #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  margin: 0 10px;
+  color: #333;
+}
+
+.form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #45a049;
+}
+
+.form span {
+  display: block;
+  margin-top: 10px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

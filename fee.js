@@ -46,14 +46,36 @@ function calculateLandFee(nextInputId) {
     }
 }
 
+// Add event listeners for "Enter" key press on each input field
+document.getElementById("weight").addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        calculateLandFee("width");
+    }
+});
+
+document.getElementById("width").addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        calculateLandFee("length");
+    }
+});
+
 document.getElementById("length").addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
-        event.preventDefault(); // Prevent the default form submission
-        calculateLandFee("order"); // Replace "order" with the desired input ID
+        event.preventDefault();
+        calculateLandFee("height");
+    }
+});
+
+document.getElementById("height").addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        calculateLandFee("order");
     }
 });
 
 // Add an event listener for the "Calculate" button click
-document.querySelector('button').addEventListener('click', function() {
-    calculateLandFee("order"); // Replace "order" with the desired input ID
+document.querySelector('button').addEventListener('click', function () {
+    calculateLandFee("order");
 });
