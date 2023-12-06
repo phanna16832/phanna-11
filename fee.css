@@ -1,0 +1,28 @@
+ nav {
+      background-color: pink;
+      overflow: hidden;
+    }
+    
+    nav a {
+      float: left;
+      display: block;
+      color: grey;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      margin-right: 10px; /* Add a bit of right margin for spacing */
+      font-weight: bold;
+    }
+    
+    nav a:hover {
+      background-color: blueviolet;
+    }
+    .form{
+        border-style: outset;
+        border-color: red;
+    }
+    .form button {
+        color:crimson;
+        border-style: none;
+        background-color: aquamarine;
+    }
