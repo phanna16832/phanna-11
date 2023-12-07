@@ -1,5 +1,5 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Hanuman";
   margin: 0;
   padding: 0;
 }
@@ -21,6 +21,9 @@ nav a {
   text-decoration: none;
   margin: 0 10px;
   color: #333;
+}
+nav a:hover {
+  color: purple;
 }
 
 .form {
