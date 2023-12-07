@@ -6,22 +6,35 @@ body {
   color: #333;
 }
 
-nav {
-  background-color: #333;
-  overflow: hidden;
+h1, h4 {
+  text-align: center;
+  color: #333;
 }
 
-nav a {
+pre {
+  text-align: left;
+  font-size: 16px;
+  white-space: pre-wrap;
+  margin: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
   float: left;
   display: block;
-  color:  #66ccff;
+  color: #fff;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-}
-
-nav a:hover {
-  background-color:  #ff0066;
 }
 
 .dropdown {
@@ -38,6 +51,7 @@ nav a:hover {
   background-color: inherit;
   font-family: inherit;
   margin: 0;
+  cursor: pointer;
 }
 
 .dropdown-content {
@@ -59,14 +73,30 @@ nav a:hover {
 }
 
 .dropdown-content a:hover {
-  background-color: #ff0066;
+  background-color: #ddd;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+.Dropdown1 {
+  text-align: center;
+  margin: 10px;
+}
+
+.dropbutton {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 14px 16px;
+  background-color: #333;
+  cursor: pointer;
+}
+
 .dropdown-content1 {
-  display: none !important;
+  display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
@@ -74,34 +104,68 @@ nav a:hover {
   z-index: 1;
 }
 
-.dropdown-content1.show {
-  display: block !important;
-}
-
-
-h1 {
-  text-align: center;
-  color:  #ff00ff;
-}
-h5{
-  text-align: center;
-  color:  #ffd11a;
-}
-
-pre {
+.dropdown-content1 a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
   text-align: left;
+}
+
+.dropdown-content1 a:hover {
+  background-color: #ddd;
+}
+/*clickable dropdown*/
+/* Dropdown Button */
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
   font-size: 16px;
-  white-space: pre-wrap;
+  border: none;
+  cursor: pointer;
 }
 
-img {
-  max-width: 70%;
-  height: auto;
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
 }
 
-/* Responsive styles */
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+
 @media screen and (max-width: 600px) {
-  nav a, .dropdown .dropbtn {
+  .navbar a, .dropdown .dropbtn, .dropbutton {
       float: none;
       display: block;
       text-align: center;
