@@ -1,61 +1,49 @@
-/* Global Styles */
 body {
-  font-family: "Kantumruy Pro", sans-serif;
+  font-family: "Siemreap";
   margin: 0;
-  padding: 0;
-  background-color: #f2f2f2;
-  color: #333;
 }
 
-h1, h5, h6 {
-  text-align: center;
-  color: #333;
-}
-
-pre {
-  text-align: left;
-  font-size: 16px;
-  white-space: pre-wrap;
-  margin: 10px;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Navigation Styles */
-nav {
-  background-color: #333;
+/* Navbar container */
+.navbar {
   overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
 }
 
-nav a {
+/* Links inside the navbar */
+.navbar a {
   float: left;
-  display: block;
-  color: #fff;
+  font-size: 16px;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
+/* The dropdown container */
 .dropdown {
   float: left;
   overflow: hidden;
 }
 
+/* Dropdown button */
 .dropdown .dropbtn {
   font-size: 16px;
   border: none;
   outline: none;
-  color: #fff;
+  color: white;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
-  cursor: pointer;
 }
 
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -65,6 +53,7 @@ nav a {
   z-index: 1;
 }
 
+/* Links inside the dropdown */
 .dropdown-content a {
   float: none;
   color: black;
@@ -74,37 +63,71 @@ nav a {
   text-align: left;
 }
 
+/* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
   background-color: #ddd;
 }
 
+/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Broken Styles */
-.broken {
-  text-align: center;
-  margin: 10px;
+/* Clickable dropdown */
+/* Dropdown Button */
+.drop {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
 }
 
-.bouble, .label {
-  max-width: 100%;
-  height: auto;
+/* Dropdown button on hover & focus */
+.drop:hover, .dropbtn:focus {
+  background-color: #2980B9;
 }
 
-.broke {
-  color: #333;
-  font-weight: bold;
+/* The container <div> - needed to position the dropdown content */
+.dropdown1 {
+  position: relative;
+  display: inline-block;
 }
 
-/* Responsive Styles */
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content1 {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content1 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content1 a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
+
+/* Media queries for responsiveness */
 @media screen and (max-width: 600px) {
-  nav a, .dropdown .dropbtn {
-      float: none;
-      display: block;
-      text-align: center;
-      width: 100%;
-      box-sizing: border-box;
-  }
+  /* Add styles for smaller screens */
 }
+  .dropdown-content, .dropdown-content1 {
+      min-width: 100%;
+  }
+  /* Adjust other styles as needed for smaller screens */
