@@ -1,6 +1,6 @@
 body {
   font-family: "Siemreap";
-  margin: 0; /* Remove default body margin for full width */
+  margin: 0;
 }
 
 /* Navbar container */
@@ -49,7 +49,7 @@ body {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -101,7 +101,7 @@ body {
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -119,7 +119,9 @@ body {
 }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
+.show {
+  display: block;
+}
 
 /* Media queries for responsiveness */
 @media screen and (max-width: 600px) {
@@ -131,4 +133,6 @@ body {
   .dropdown-content, .dropdown-content1 {
       min-width: 100%;
   }
+  
+  /* Adjust other styles as needed for smaller screens */
 }
