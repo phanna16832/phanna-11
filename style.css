@@ -125,14 +125,9 @@ body {
 
 /* Media queries for responsiveness */
 @media screen and (max-width: 600px) {
-  .navbar a, .dropdown .dropbtn, .dropdown1 .drop {
-      font-size: 14px;
-      padding: 10px;
-  }
-
+  /* Add styles for smaller screens */
+}
   .dropdown-content, .dropdown-content1 {
       min-width: 100%;
   }
-  
   /* Adjust other styles as needed for smaller screens */
-}
