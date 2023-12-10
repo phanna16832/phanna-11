@@ -6,9 +6,11 @@ body {
 h1, h4 {
   text-align: center;
 }
-pre{
-  font-family: "Seimreap";
+
+pre {
+  font-family: "Siemreap";
 }
+
 .navbar {
   overflow: hidden;
   background-color: rgb(13, 145, 217);
@@ -17,7 +19,7 @@ pre{
 .navbar a {
   float: left;
   display: block;
-  color:rgb(176, 33, 157);
+  color: rgb(176, 33, 157);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -39,7 +41,8 @@ pre{
   cursor: pointer;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover,
+.dropdown:hover .dropbtn {
   background-color: rgb(235, 92, 21);
 }
 
@@ -48,7 +51,7 @@ pre{
   position: absolute;
   background-color: rgb(9, 232, 202);
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -68,14 +71,16 @@ pre{
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
 @media screen and (max-width: 600px) {
-  nav a pre, .dropdown .dropbtn {
-      float: none;
-      display: block;
-      text-align: center;
-      width: 100%;
-      box-sizing: border-box;
-      font-family: "Siemreap";
-      font-size: medium;
+  nav a pre,
+  .dropdown .dropbtn {
+    float: none;
+    display: block;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Siemreap";
+    font-size: medium;
   }
 }
