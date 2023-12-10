@@ -1,5 +1,16 @@
-/* Add this style for the dropdown button */
-.drop {
+body {
+  font-family: "Siemreap";
+  margin: 0;
+  font-size: 16px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+}
+
+.dropbtn, .drop {
   background-color: #4CAF50;
   color: white;
   padding: 14px 16px;
@@ -8,8 +19,13 @@
   cursor: pointer;
 }
 
-/* Style the dropdown content */
-.dropdown-content {
+.dropdown,
+.dropdown1 {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content, .dropdown-content1 {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -17,20 +33,28 @@
   z-index: 1;
 }
 
-/* Style the dropdown links */
-.dropdown-content a {
+.dropdown-content a, .dropdown-content1 a {
   color: black;
   padding: 12px 16px;
   display: block;
   text-decoration: none;
 }
 
-/* Change color on hover */
-.dropdown-content a:hover {
+.dropdown-content a:hover, .dropdown-content1 a:hover {
   background-color: #ddd;
 }
 
-/* Show the dropdown on hover */
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content, .dropdown1:hover .dropdown-content1 {
   display: block;
+}
+
+/* Add media query for responsiveness */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  .dropdown-content, .dropdown-content1 {
+    min-width: 100%;
+  }
 }
