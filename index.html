@@ -36,14 +36,27 @@
     <input type="checkbox" id="dropdownCheckbox">
 
     <!-- Dropdown content -->
-    <div id="myDropdown1" class="dropdown-content">
+    <div class="w3-dropdown-click">
+      <button onclick="myFunction()" class="w3-button w3-black">Click Me!</button>
+      <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
       <a href="save reply.html">telegram save reply</a>
       <a href="ccsl.html">save reply with ccsl</a>
       <a href="#">facebook save reply</a>
       <a href="#">Save reply with fs warehouse</a>
       <a href="calculate.html">Land transportation fee</a>
+      </div>
     </div>
-  </div>
+    <!--add javascript-->
+    <script>
+    function myFunction() {
+      var x = document.getElementById("Demo");
+      if (x.className.indexOf("w3-show") == -1) { 
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+    </script>
   <h4 style="color:blue; text-align: center;"> Reply comment facebook</h4>
   <div style="color: red; font-size: small; border-style: inset; border-radius: 25px;">
   <pre>
@@ -73,8 +86,5 @@
 ក្នុងករណីបងមិនទាន់បានចុះឈ្មោះប្រើប្រាស់អេបtaobaoទេ
 សូមបងធ្វើការចុះឈ្មោះជាមួយ​គណនីអ៊េបទំនិញចិន Taobao: https://youtu.be/w-8KJqb2FCM
     </pre>
-  </div>
-  <!--add javascript-->
-  <script src="index.js"></script>
-  </body>
+ </body>
   </html>
