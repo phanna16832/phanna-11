@@ -1,18 +1,14 @@
-// When the user clicks on the button, toggle between hiding and showing the dropdown content
-function myFunction() {
-    var dropdownContent = document.getElementById("myDropdown");
-    dropdownContent.classList.toggle("show");
-  }
-  
-  // Close the dropdown menu if the user clicks outside of it
-  window.onclick = function(event) {
-    if (!event.target.matches('.drop')) {
-      var dropdowns = document.querySelectorAll('.dropdown-content1');
-      dropdowns.forEach(function(openDropdown) {
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      });
-    }
-  };
-  
+ // Get the checkbox and dropdown content
+ var dropdownCheckbox = document.getElementById("dropdownCheckbox");
+ var dropdownContent = document.getElementById("myDropdown1");
+
+ // Add event listener to checkbox change
+ dropdownCheckbox.addEventListener("change", function() {
+   // If checkbox is checked, display the dropdown content
+   if (dropdownCheckbox.checked) {
+     dropdownContent.style.display = "block";
+   } else {
+     // If checkbox is unchecked, hide the dropdown content
+     dropdownContent.style.display = "none";
+   }
+ });
