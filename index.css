@@ -1,28 +1,36 @@
-body {
-  font-family: "Siemreap";
-  margin: 0;
+/* Add this style for the dropdown button */
+.drop {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 16px;
   font-size: 16px;
+  border: none;
+  cursor: pointer;
 }
 
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  font-family: Arial;
+/* Style the dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-/* Your existing styles */
+/* Style the dropdown links */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+}
 
-/* Media queries for responsiveness */
-@media screen and (max-width: 600px) {
-  /* Adjust styles for smaller screens */
-  body {
-    font-size: 14px;
-  }
+/* Change color on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
-  .dropdown-content,
-  .dropdown-content1 {
-    min-width: 100%;
-  }
-
-  /* Adjust other styles as needed for smaller screens */
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
