@@ -70,9 +70,8 @@ pre {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
 @media screen and (max-width: 600px) {
-  nav a pre, .dropdown .dropbtn {
+  .navbar a, .dropdown .dropbtn {
     float: none;
     display: block;
     text-align: center;
@@ -80,5 +79,9 @@ pre {
     box-sizing: border-box;
     font-family: "Siemreap";
     font-size: medium;
+  }
+
+  .dropdown-content {
+    text-align: center;
   }
 }
