@@ -72,6 +72,7 @@
 .text h4,
 .text pre {
   text-align: center;
+  font-size: "Siemreap";
   color: pink;
   word-wrap: break-word;
 }
