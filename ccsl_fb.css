@@ -1,6 +1,5 @@
 /* Global Styles */
 body {
-  font-family: "Kantumruy Pro", sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f2f2f2;
@@ -9,14 +8,18 @@ body {
 
 h1, h5, h6 {
   text-align: center;
-  color: #333;
+  color:  #66b3ff;
+  font-size: 1rem;
 }
 
 pre {
   text-align: left;
-  font-size: 16px;
+  font-size: 1rem;
+  font-family: 'Freehand','Noto Serif SC';
   white-space: pre-wrap;
+  color:  #ff4d94;
   margin: 10px;
+  text-align: left;
 }
 
 img {
@@ -93,6 +96,10 @@ nav a:hover{
   max-width: 60%;
   height: auto;
 }
+.broken h5{
+  font-family: 'Hanuman';
+  font-size: 0.8rem;
+}
 
 .bouble, .label {
   max-width: 60%;
@@ -115,15 +122,11 @@ nav a:hover{
 }
 .reply pre{
   text-align: start;
-  font-size: 0.8rem;
-  font-family: "Noto Serif SC:";
+  font-size: 0.9rem;
+  font-family: 'Hanuman';
+  font-style: bold;
+  color:  #0000cc;
 }
-pre{
-  text-align: center;
-  font-size: 0.8rem;
-  color: #000080;
-}
-
 /* Responsive Styles */
 @media screen and (max-width: 600px) {
   nav a, .dropdown .dropbtn {

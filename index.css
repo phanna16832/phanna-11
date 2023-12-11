@@ -73,10 +73,11 @@
   text-align: center; /* Add this line to center-align the text */
 }
 .text pre {
-  font-family: "Siemreap"; /* Note: Removed the extra quotes around "Siemreap" */
+  font-family: "Hanuman"; /* Note: Removed the extra quotes around "Siemreap" */
   color: rgb(64, 24, 222);
   word-wrap: break-word;
-  text-align: left; /* Add this line to left-align the text */
+  text-align: left; 
+  font-size: 0.8;/* Add this line to left-align the text */
 }
 
 .text pre {
