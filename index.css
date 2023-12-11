@@ -1,4 +1,10 @@
 /* Common styles for all screen sizes */
+body{
+  background-image: url(img/download.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
 .navbar {
   overflow: hidden;
   background-color: rgb(3, 255, 40);
@@ -8,7 +14,7 @@
 .navbar a {
   float: left;
   font-size: 16px;
-  color: white;
+  color: #ff0066;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -24,7 +30,7 @@
   font-size: 16px;  
   border: none;
   outline: none;
-  color: white;
+  color: #ff0066;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
@@ -32,7 +38,7 @@
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
-  background-color: rgb(237, 14, 181);
+  background-color: #993300;
 }
 
 .dropdown-content {
@@ -54,7 +60,7 @@
 }
 
 .dropdown-content a:hover {
-  background-color: rgb();
+  background-color:	 #ff661a;
 }
 
 .show {
@@ -64,9 +70,6 @@
 .text {
   border-radius: 20px;
   border-style: outset;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 .text h4 {
   color: rgb(3, 255, 40);
@@ -74,7 +77,8 @@
 }
 .text pre {
   font-family: "Hanuman"; /* Note: Removed the extra quotes around "Siemreap" */
-  color: rgb(64, 24, 222);
+  color: #ff0066;
+  font-weight: bold;
   word-wrap: break-word;
   text-align: left; 
   font-size: 0.8;/* Add this line to left-align the text */
