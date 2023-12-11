@@ -68,21 +68,24 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
-.text h4,
+.text h4 {
+  color: rgb(3, 255, 40);
+  text-align: center; /* Add this line to center-align the text */
+}
 .text pre {
-  text-align: center;
-  font-size: "Siemreap";
-  color: pink;
+  font-family: "Siemreap"; /* Note: Removed the extra quotes around "Siemreap" */
+  color: rgb(64, 24, 222);
   word-wrap: break-word;
+  text-align: left; /* Add this line to left-align the text */
 }
 
 .text pre {
   white-space: pre-wrap;
   word-wrap: break-word;
-  padding: 10px; /* Add padding to enhance the appearance */
-  border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+  padding: 10px;
+  border-radius: 10px;
 }
+
 
 /* Responsive styles */
 @media screen and (max-width: 600px) {

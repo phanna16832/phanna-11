@@ -26,17 +26,21 @@ img {
 
 /* Navigation Styles */
 nav {
-  background-color: #333;
+  background-color: #c266ff;
   overflow: hidden;
+  color: black;
 }
 
 nav a {
   float: left;
   display: block;
-  color: #fff;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+}
+nav a:hover{
+  background-color:  #00cc00;
 }
 
 .dropdown {
@@ -48,7 +52,7 @@ nav a {
   font-size: 16px;
   border: none;
   outline: none;
-  color: #fff;
+  color:blue;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
@@ -86,16 +90,38 @@ nav a {
 .broken {
   text-align: center;
   margin: 10px;
+  max-width: 60%;
+  height: auto;
 }
 
 .bouble, .label {
-  max-width: 100%;
+  max-width: 60%;
   height: auto;
 }
 
 .broke {
-  color: #333;
-  font-weight: bold;
+  color: yellowgreen;
+  text-align: center;
+}
+.reply{
+  border-style: dotted;
+  border-radius: 16px;
+  border-color: #1a1aff;
+}
+.reply h4{
+  color: #ff1a75;
+  font-size: 2rem;
+  text-align: center;
+}
+.reply pre{
+  text-align: start;
+  font-size: 0.8rem;
+  font-family: "Noto Serif SC:";
+}
+pre{
+  text-align: center;
+  font-size: 0.8rem;
+  color: #000080;
 }
 
 /* Responsive Styles */
