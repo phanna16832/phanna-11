@@ -93,7 +93,7 @@ nav a:hover{
 .broken {
   text-align: center;
   margin: 10px;
-  max-width: 60%;
+  max-width: 35%;
   height: auto;
 }
 .broken h5{
@@ -102,7 +102,7 @@ nav a:hover{
 }
 
 .bouble, .label {
-  max-width: 60%;
+  max-width: 35%;
   height: auto;
 }
 
