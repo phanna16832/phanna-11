@@ -5,6 +5,40 @@ body{
   background-attachment: fixed;
   background-size: 100% 100%;
 }
+/* Search bar styles */
+#searchBar {
+  width: 80%; /* Adjust the width as needed */
+  padding: 10px;
+  margin: 10px auto; /* Align center */
+  border: none;
+  border-radius: 25px; /* Set border radius to 25px */
+  outline: none;
+  font-size: 1rem;
+}
+
+/* Search result styles */
+#searchResults div {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+#searchResults h3 {
+  margin-bottom: 5px;
+  color: #f0990e;
+}
+
+#searchResults a {
+  color: #f0ca0e;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#searchResults a:hover {
+  text-decoration: underline;
+}
+/*nav bar*/
 .navbar {
   overflow: hidden;
   background-color: rgb(3, 255, 40);
