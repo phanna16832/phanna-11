@@ -21,12 +21,13 @@ pre {
   margin: 10px;
   text-align: left;
 }
-
 img {
-  max-width: 35%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
   height: auto;
 }
-
 /* Navigation Styles */
 nav {
   background-color: #c266ff;
@@ -102,8 +103,9 @@ nav a:hover{
 }
 
 .bouble, .label {
-  max-width: 35%;
+  max-width: 300px;
   height: auto;
+  margin: 5%;
 }
 
 .broke {
