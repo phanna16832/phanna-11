@@ -5,28 +5,31 @@ body {
     background-color: #f2f2f2;
 }
 
-div {
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-}
-
 nav {
+    background-color: #ff0066;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    color: #0000e6;
     text-align: center;
-}
-
-a {
+    padding: 14px 16px;
     text-decoration: none;
-    color: #333333;
-    padding: 10px;
-    margin: 0 10px;
-    border-radius: 5px;
-    background-color: #cccccc;
-    transition: background-color 0.3s ease;
 }
 
-a:hover {
-    background-color: #999999;
+nav a:hover {
+    background-color: #1aff66;
 }
 .taobao {
     display: flex;
