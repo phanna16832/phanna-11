@@ -28,6 +28,8 @@ nav a:hover {
 }
 .taobao pre{
     white-space: pre-wrap;
+    color: red;
+    font-size: .5rem;
 }
 .tb1{
     width: 160px;
