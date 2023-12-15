@@ -27,7 +27,7 @@ nav a:hover {
     border-radius: 25px;
 }
 .taobao pre{
-    text-wrap: ;
+    white-space: pre-wrap;
 }
 .tb1{
     width: 160px;
