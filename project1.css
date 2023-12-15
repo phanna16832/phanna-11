@@ -29,13 +29,28 @@ nav a:hover {
 .taobao pre{
     white-space: pre-wrap;
     color: red;
-    font-size: .5rem;
+    font-size: 1rem;
+    font-family : 'Noto Serif SC';
 }
 .tb1{
     width: 160px;
     height: 10%;
+     margin-right: 5%;
 }
 .tb2{
-    width: 160px;
+    width: 165px;
     height: 10%;
+}
+.pdd1{
+    border: 1px dotted red;
+    border-radius: 10px;
+}
+.pdd1 img{
+        width: 460px; 
+}
+.pdd1 pre{
+    white-space: pre-wrap;
+    font-size: 1rem;
+    font-family : 'Noto Serif SC';
+    color : red;
 }
