@@ -1,0 +1,39 @@
+body{
+background-color: pink;
+margin : 0;
+padding: 0;
+}
+nav  {
+    background-color: blueviolet;
+    overflow:  hidden;
+}
+nav li {
+    list-style-type: none;
+}
+nav a {
+    float: left;
+    display: block;
+    color: pink;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+nav a:hover {
+    background-color: #fcba03;
+    color:  #0328fc;
+}
+.taobao{
+    border-style: outset;
+    border-radius: 25px;
+}
+.taobao pre{
+    text-wrap: ;
+}
+.tb1{
+    width: 160px;
+    height: 10%;
+}
+.tb2{
+    width: 160px;
+    height: 10%;
+}
