@@ -124,6 +124,20 @@ body{
   padding: 10px;
   border-radius: 10px;
 }
+/*button style*/
+button {
+  padding: 10px 15px;
+  background-color: #fc0317;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #fc03cf;
+}
 
 
 /* Responsive styles */

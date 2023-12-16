@@ -129,6 +129,16 @@ nav a:hover{
   font-style: bold;
   color:  #0000cc;
 }
+/*copy text button style*/
+button{
+  padding: 10px 15px;
+  background-color: #fc0317;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 /* Responsive Styles */
 @media screen and (max-width: 600px) {
   nav a, .dropdown .dropbtn {

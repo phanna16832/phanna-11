@@ -18,52 +18,43 @@
     </nav>
     <h1>Phanna online shop</h1>
     <div class="taobao">
-        <img src="taobao1.jpg" class="tb1">
-        <img src="taobao2.jpg" class="tb2">
-        <pre id="pretext"> បងជួយចុចចូលកន្លែងដែលប្អូនគូសក្នុងរូបទី1 បន្ទាប់មកនឹងលោតផ្ទាំងសម្រាប់រជ្រើសរើសម៉ូត ពណ៌ ទំហំ ប្រភេទ និងចំនួនទំនិញ នៅពេលបងជ្រើសម៉ូត ពណ៌ ទំហំ ប្រភេទ និងចំនួនទំនិញ រួចនឹងមានតម្លៃនៅលើ បងអាចយកតម្លៃទំនិញទៅចែកនឹង6 ដើម្បីឃើញថ្លៃទំនិញជាលុយដុល្លា</pre>
-        <button id="copyButton">Copy Text</button>
-    </div>
-    <div class="pdd1">
-        <img src="img/pdd.jpg">
-         <pre id="pretext"> បងជួយចុចចូលកន្លែងដែលប្អូនគូសក្នុងរូបទី1 បន្ទាប់មកនឹងលោតផ្ទាំងសម្រាប់រជ្រើសរើសម៉ូត ពណ៌ ទំហំ ប្រភេទ និងចំនួនទំនិញ នៅពេលបងជ្រើសម៉ូត ពណ៌ ទំហំ ប្រភេទ និងចំនួនទំនិញ រួចនឹងមានតម្លៃនៅលើ បងអាចយកតម្លៃទំនិញទៅចែកនឹង6 ដើម្បីឃើញថ្លៃទំនិញជាលុយដុល្លា</pre>
-         <button id="copyButton2">Copy</button>
+            <img src="taobao1.jpg" class="tb1">
+            <img src="taobao2.jpg" class="tb2">
+            <pre id="pretext1"> បងជួយចុចចូលកន្លែងដែលប្អូនគូសក្នុងរូបទី1 បន្ទាប់មកនឹងលោតផ្ទាំងសម្រាប់រជ្រើសរើសម៉ូត ពណ៌ ទំហំ ប្រភេទ និងចំនួនទំនិញ នៅពេលបងជ្រើសម៉ូត ពណ៌ ទំហំ ប្រភេទ និងចំនួនទំនិញ រួចនឹងមានតម្លៃនៅលើ បងអាចយកតម្លៃទំនិញទៅចែកនឹង6 ដើម្បីឃើញថ្លៃទំនិញជាលុយដុល្លា</pre>
+            <button onclick="copyText('pretext1')">Copy Text</button>
+        </div>
+        
+        <div class="pdd1">
+            <img src="img/pdd.jpg">
+            <pre id="pretext2"> បងជួយចុចចូលកន្លែងដែលប្អូនគូសក្នុងរូបទី1 បន្ទាប់មកនឹងលោតផ្ទាំងសម្រាប់រជ្រើសរើសម៉ូត ពណ៌ ទំហំ ប្រភេទ និងចំនួនទំនិញ នៅពេលបងជ្រើសម៉ូត ពណ៌ ទំហំ ប្រភេទ និងចំនួនទំនិញ រួចនឹងមានតម្លៃនៅលើ បងអាចយកតម្លៃទំនិញទៅចែកនឹង6 ដើម្បីឃើញថ្លៃទំនិញជាលុយដុល្លា</pre>
+            <button onclick="copyText('pretext2')">Copy Text</button>
         </div>
         <script>
-            document.getElementById('copyButton').addEventListener('click', function() {
-                // Select the text inside the <pre> element
-                var preText = document.getElementById('pretext'); // Updated ID to 'pretext'
-                var range = document.createRange();
-                range.selectNode(preText);
-                window.getSelection().removeAllRanges();
-                window.getSelection().addRange(range);
-        
-                // Copy the selected text to the clipboard
-                document.execCommand('copy');
-        
-                // Deselect the text
-                window.getSelection().removeAllRanges();
-        
-                // You can provide some visual feedback that the text has been copied, for example:
-                alert('បងជួយចុចចូលកន្លែងដែលប្អូនគូសក្នុងរូបទី1 បន្ទាប់មកនឹងលោតផ្ទាំងសម្រាប់រជ្រើសរើសម៉ូត ពណ៌ ទំហំ ប្រភេទ និងចំនួនទំនិញ នៅពេលបងជ្រើសម៉ូត ពណ៌ ទំហំ ប្រភេទ និងចំនួនទំនិញ រួចនឹងមានតម្លៃនៅលើ បងអាចយកតម្លៃទំនិញទៅចែកនឹង6 ដើម្បីឃើញថ្លៃទំនិញជាលុយដុល្លា');
-            });
-        
-            document.getElementById('copyButton2').addEventListener('click', function() {
-                // Select the text inside the second <pre> element
-                var preText2 = document.getElementById('pretext'); // Updated ID to 'pretext'
-                var range2 = document.createRange();
-                range2.selectNode(preText2);
-                window.getSelection().removeAllRanges();
-                window.getSelection().addRange(range2);
-        
-                // Copy the selected text to the clipboard
-                document.execCommand('copy');
-        
-                // Deselect the text
-                window.getSelection().removeAllRanges();
-        
-                // You can provide some visual feedback that the text has been copied, for example:
-                alert('បងជួយចុចចូលកន្លែងដែលប្អូនគូសក្នុងរូបទី1 បន្ទាប់មកនឹងលោតផ្ទាំងសម្រាប់រជ្រើសរើសម៉ូត ពណ៌ ទំហំ ប្រភេទ និងចំនួនទំនិញ នៅពេលបងជ្រើសម៉ូត ពណ៌ ទំហំ ប្រភេទ និងចំនួនទំនិញ រួចនឹងមានតម្លៃនៅលើ បងអាចយកតម្លៃទំនិញទៅចែកនឹង6 ដើម្បីឃើញថ្លៃទំនិញជាលុយដុល្លា');
-            });
-        </script>
-        </body>
-        </html>
+            function copyText(elementId) {
+  var preText = document.getElementById(elementId);
+  var textToCopy = preText.innerText;
+
+  // Create a temporary textarea element
+  var tempTextarea = document.createElement('textarea');
+  tempTextarea.value = textToCopy;
+  document.body.appendChild(tempTextarea);
+
+  // Select the text in the textarea
+  tempTextarea.select();
+  tempTextarea.setSelectionRange(0, 99999); // For mobile devices
+
+  try {
+    // Attempt to copy the selected text to the clipboard
+    var successful = document.execCommand('copy');
+    var message = successful ? 'Text copied to clipboard' : 'Unable to copy text';
+    console.log(message);
+  } catch (err) {
+    console.error('Error copying text', err);
+  } finally {
+    // Remove the temporary textarea
+    document.body.removeChild(tempTextarea);
+  }
+}
+</script>
+</body>
+</html>

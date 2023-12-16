@@ -36,12 +36,14 @@
     </div>
     <br>
     <h5>系统填错快递单号<b></b></h5>
-    <pre>你好！ 帮忙核实一下，这个订单下单的时候是 CE  但是系统里是 CE
+    <pre id="pretext1">你好！ 帮忙核实一下，这个订单下单的时候是 CE  但是系统里是 CE
       (国内快递单号是 Tracking Number 集运单号是 C )</pre>
+      <button onclick="copyHtml('pretext2')">复制</button>
       <br>
         <h6><b> 购买错CE会员号</h6></b>
-        <pre><b>您好，我这边查到又有错一个会员号了CE   国内快递单号 Tracking  集运单号 C  ）
+        <pre id="pretext2"><b>您好，我这边查到又有错一个会员号了CE   国内快递单号 Tracking  集运单号 C  ）
           这个订单号麻烦换成 CE</pre></b>
+          <button onclick="copyHtml('pretext1')">复制</button>
           <div class="reply">
             <h4>reply comment facebook</h4>
             <pre>
@@ -57,5 +59,6 @@
               ជួយទិញ និង បង្រៀនទិញទំនិញពីប្រទេសចិនដោយឥតគិតថ្លៃ ជាមួយក្រុមហ៊ុនស៊ីអ៊ី 
             </pre>
           </div>
+          <script src="telegram.js"></script>
         </body>
-</html>
+        </html>

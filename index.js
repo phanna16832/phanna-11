@@ -55,3 +55,30 @@ function displayResults(results) {
     searchResultsContainer.appendChild(resultItem);
   });
 }
+
+//copy text button//
+function copyText(elementId) {
+  var preText = document.getElementById(elementId);
+  var textToCopy = preText.innerText;
+
+  // Create a temporary textarea element
+  var tempTextarea = document.createElement('textarea');
+  tempTextarea.value = textToCopy;
+  document.body.appendChild(tempTextarea);
+
+  // Select the text in the textarea
+  tempTextarea.select();
+  tempTextarea.setSelectionRange(0, 99999); // For mobile devices
+
+  try {
+    // Attempt to copy the selected text to the clipboard
+    var successful = document.execCommand('copy');
+    var message = successful ? 'Text copied to clipboard' : 'Unable to copy text';
+    console.log(message);
+  } catch (err) {
+    console.error('Error copying text', err);
+  } finally {
+    // Remove the temporary textarea
+    document.body.removeChild(tempTextarea);
+  }
+}
