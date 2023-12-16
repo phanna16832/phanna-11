@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Freehand&family=Hanuman:wght@100&family=Noto+Serif+SC:wght@200&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="ccsl_fb.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
     <nav>
@@ -38,27 +39,13 @@
     <h5>系统填错快递单号<b></b></h5>
     <pre id="pretext1">你好！ 帮忙核实一下，这个订单下单的时候是 CE  但是系统里是 CE
       (国内快递单号是 Tracking Number 集运单号是 C )</pre>
-      <button onclick="copyHtml('pretext2')">复制</button>
+      <button onclick="copyText('pretext1')"><i class="fa fa-copy"> Copy Text</button></i>
       <br>
-        <h6><b> 购买错CE会员号</h6></b>
-        <pre id="pretext2"><b>您好，我这边查到又有错一个会员号了CE   国内快递单号 Tracking  集运单号 C  ）
-          这个订单号麻烦换成 CE</pre></b>
-          <button onclick="copyHtml('pretext1')">复制</button>
-          <div class="reply">
-            <h4>reply comment facebook</h4>
-            <pre>
-              សួស្តីបង 
-              ពត៌មានរបៀបប្រើសេវាជួយទិញទំនិញដោយឥតគិតថ្លៃ : https://shorturl.at/pqQW6
-              Join Telegram Group ជួយទិញ: https://t.me/+CyEdYOtceZkwZjQ1
-              បងសូមចុចចុះឈ្មោះតាមលីងនេះសិនមកបង
-              https://m.ceccsl.com/reg/khmindex?tj
-              Telegram ក្រុមការងារបញ្ជាទិញ : https://t.me/CE_EXPRESS
-              
-              *សំរាប់ការការបង្រៀនទិញបងអាចទាក់ទងតេឡេក្រាមខាងក្រោមបាន 
-              https://t.me/+zaVpyk9lVlI2YmU1
-              ជួយទិញ និង បង្រៀនទិញទំនិញពីប្រទេសចិនដោយឥតគិតថ្លៃ ជាមួយក្រុមហ៊ុនស៊ីអ៊ី 
-            </pre>
-          </div>
-          <script src="telegram.js"></script>
-        </body>
-        </html>
+    <h6><b> 购买错CE会员号</h6></b>
+    <pre id="pretext2"><b>您好，我这边查到又有错一个会员号了CE   国内快递单号 Tracking  集运单号 C  ）
+      这个订单号麻烦换成 CE</pre></b>
+    <button onclick="copyText('pretext2')"><i class="fas fa-copy"></i> Copy Text</button>
+    <script src="telegram.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" integrity="sha384-cNyZhXK1lncjIH0Nz1BTE74jOblpKhmQ4Lvv58Q+vciq5aFtY5LML7CehpJi8fsS" crossorigin="anonymous"></script>
+</body>
+</html>

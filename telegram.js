@@ -1,25 +1,19 @@
- function copyHtml(elementId) {
-    var element = document.getElementById(elementId);
+function copyText(elementId) {
+  var textElement = document.getElementById(elementId);
 
-    // Create a temporary textarea element
-    var tempTextarea = document.createElement('textarea');
-    tempTextarea.value = element.innerText;
-    document.body.appendChild(tempTextarea);
+  // Create a temporary input element
+  var tempInput = document.createElement('input');
+  tempInput.value = textElement.innerText;
+  document.body.appendChild(tempInput);
 
-    // Select the text in the textarea
-    tempTextarea.select();
-    tempTextarea.setSelectionRange(0, 99999); // For mobile devices
+  // Select the text in the input element
+  tempInput.select();
+  tempInput.setSelectionRange(0, 99999); // For mobile devices
 
-    // Use the Clipboard API to copy the selected text
-    navigator.clipboard.writeText(tempTextarea.value)
-      .then(function() {
-        console.log('Content copied to clipboard');
-      })
-      .catch(function(err) {
-        console.error('Error copying text', err);
-      })
-      .finally(function() {
-        // Remove the temporary textarea
-        document.body.removeChild(tempTextarea);
-      });
-  }
+  // Copy the selected text
+  document.execCommand('copy');
+  console.log('Content copied to clipboard');
+
+  // Remove the temporary input element
+  document.body.removeChild(tempInput);
+}
