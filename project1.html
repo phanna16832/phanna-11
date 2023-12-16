@@ -31,7 +31,7 @@
         <script>
             document.getElementById('copyButton').addEventListener('click', function() {
                 // Select the text inside the <pre> element
-                var preText = document.getElementById('preText');
+                var preText = document.getElementById('pretext'); // Updated ID to 'pretext'
                 var range = document.createRange();
                 range.selectNode(preText);
                 window.getSelection().removeAllRanges();
@@ -49,7 +49,7 @@
         
             document.getElementById('copyButton2').addEventListener('click', function() {
                 // Select the text inside the second <pre> element
-                var preText2 = document.getElementById('preText2');
+                var preText2 = document.getElementById('pretext'); // Updated ID to 'pretext'
                 var range2 = document.createRange();
                 range2.selectNode(preText2);
                 window.getSelection().removeAllRanges();
