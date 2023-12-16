@@ -42,11 +42,13 @@ nav a:hover {
     height: 10%;
 }
 .pdd1{
-    border: 1px dotted red;
+    border-style: dashed;
+    border-color: red;
     border-radius: 10px;
 }
 .pdd1 img{
-        width: 460px; 
+        width: 400px;
+        height: 5%;
 }
 .pdd1 pre{
     white-space: pre-wrap;
