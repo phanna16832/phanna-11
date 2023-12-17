@@ -3,35 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>facebook save reply</title>
+    <title>Facebook Save Reply</title>
     <link rel="stylesheet" href="project1.css">
-    <!--font style-->
+    <!-- Font style -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@200&family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@200&family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
         <li><a href="index.html">Home Page</a></li>
-        <li><a href="ccsl.html"> contact with ccsl</a></li>
+        <li><a href="ccsl.html">Contact with CCSL</a></li>
         <li><a href="https://www.baidu.com/s?ie=utf-8&f=3&rsv_bp=1&tn=baidu&wd=%E6%9F%A5%E8%AF%A2%E7%89%A9%E6%B5%81%E5%BF%AB%E9%80%92&oq=%25E6%259F%25A5%25E8%25AF%25A2%25E5%258C%2585%25E8%25A3%25B9&rsv_pq=c2474cd00029b1a9&rsv_t=b23awv1Y1mfdtpLVKsH%2BH%2BICQoR%2Fmv3NbHBUzilowNUIIz2OHl2iRm1i0Ss&rqlang=cn&rsv_dl=ts_0&rsv_enter=1&rsv_btype=t&inputT=5551&rsv_sug3=19&rsv_sug1=18&rsv_sug7=100&rsv_sug2=1&prefixsug=%25E6%259F%25A5%25E8%25AF%25A2%25E7%2589%25A9%25E6%25B5%2581&rsp=0&rsv_sug4=5661" target="_blank">百度查询包裹</a></li>
     </nav>
-    <h1>Phanna online shop</h1>
+    <h1>Phanna Online Shop</h1>
     <input type="text" id="searchBar" placeholder="Search...">
-    <button onclick="performSearch()">Search</button>
+    <button onclick="performSearch()" id="searchButton">
+        <span class="icon">&#128269;</span> <!-- Search icon -->
+        Search
+    </button>
     <div id="searchResults"></div>
     <div class="taobao">
-            <img src="taobao1.jpg" class="tb1">
-            <img src="taobao2.jpg" class="tb2">
-            <pre id="pretext1"> បងជួយចុចចូលកន្លែងដែលប្អូនគូសក្នុងរូបទី1 បន្ទាប់មកនឹងលោតផ្ទាំងសម្រាប់រជ្រើសរើសម៉ូត ពណ៌ ទំហំ ប្រភេទ និងចំនួនទំនិញ នៅពេលបងជ្រើសម៉ូត ពណ៌ ទំហំ ប្រភេទ និងចំនួនទំនិញ រួចនឹងមានតម្លៃនៅលើ បងអាចយកតម្លៃទំនិញទៅចែកនឹង6 ដើម្បីឃើញថ្លៃទំនិញជាលុយដុល្លា</pre>
-            <button onclick="copyText('pretext1')" id="tb1">Copy Text</button>
-        </div>
+        <img src="taobao1.jpg" class="tb1">
+        <img src="taobao2.jpg" class="tb2">
+        <pre id="pretext1"> បងជួយចុចចូលកន្លែងដែលប្អូនគូសក្នុងរូបទី1 បន្ទាប់មកនឹងលោតផ្ទាំងសម្រាប់រជ្រើសរើសម៉ូត ពណ៌ ទំហំ ប្រភេទ និងចំនួនទំនិញ នៅពេលបងជ្រើសម៉ូត ពណ៌ ទំហំ ប្រភេទ និងចំនួនទំនិញ រួចនឹងមានតម្លៃនៅលើ បងអាចយកតម្លៃទំនិញទៅចែកនឹង6 ដើម្បីឃើញថ្លៃទំនិញជាលុយដុល្លា</pre>
+        <button onclick="copyText('pretext1')" id="tb1">Copy Text</button>
+    </div>
         
-        <div class="pdd1">
-            <img src="img/pdd.jpg">
-            <pre id="pretext2"> បងជួយចុចចូលកន្លែងដែលប្អូនគូសក្នុងរូបទី1 បន្ទាប់មកនឹងលោតផ្ទាំងសម្រាប់រជ្រើសរើសម៉ូត ពណ៌ ទំហំ ប្រភេទ និងចំនួនទំនិញ នៅពេលបងជ្រើសម៉ូត ពណ៌ ទំហំ ប្រភេទ និងចំនួនទំនិញ រួចនឹងមានតម្លៃនៅលើ បងអាចយកតម្លៃទំនិញទៅចែកនឹង6 ដើម្បីឃើញថ្លៃទំនិញជាលុយដុល្លា</pre>
-            <button onclick="copyText('pretext2')" id="pdd1">Copy Text</button>
-        </div>
-        <script src="project1.js"></script>
+    <div class="pdd1">
+        <img src="img/pdd.jpg">
+        <pre id="pretext2"> បងជួយចុចចូលកន្លែងដែលប្អូនគូសក្នុងរូបទី1 បន្ទាប់មកនឹងលោតផ្ទាំងសម្រាប់រជ្រើសរើសម៉ូត ពណ៌ ទំហំ ប្រភេទ និងចំនួនទំនិញ នៅពេលបងជ្រើសម៉ូត ពណ៌ ទំហំ ប្រភេទ និងចំនួនទំនិញ រួចនឹងមានតម្លៃនៅលើ បងអាចយកតម្លៃទំនិញទៅចែកនឹង6 ដើម្បីឃើញថ្លៃទំនិញជាលុយដុល្លា</pre>
+        <button onclick="copyText('pretext2')" id="pdd1">Copy Text</button>
+    </div>
+    <script src="project1.js"></script>
 </body>
 </html>
