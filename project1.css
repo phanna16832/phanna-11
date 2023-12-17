@@ -63,10 +63,17 @@ nav a:hover {
     border-radius: 10px;
     border-style: solid;
 }
+.taobao #tb1{
+    color : white;
+    background-color: orange;
+    font-weight: bold;
+    border-radius: 10px;
+    border-style: solid;
+}
 button{
     color : white;
     background-color: red;
     font-weight: bold;
-    border-radius: 10px;
+    border-radius: 5px;
     border-style: solid;
 }

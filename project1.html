@@ -32,32 +32,6 @@
             <pre id="pretext2"> បងជួយចុចចូលកន្លែងដែលប្អូនគូសក្នុងរូបទី1 បន្ទាប់មកនឹងលោតផ្ទាំងសម្រាប់រជ្រើសរើសម៉ូត ពណ៌ ទំហំ ប្រភេទ និងចំនួនទំនិញ នៅពេលបងជ្រើសម៉ូត ពណ៌ ទំហំ ប្រភេទ និងចំនួនទំនិញ រួចនឹងមានតម្លៃនៅលើ បងអាចយកតម្លៃទំនិញទៅចែកនឹង6 ដើម្បីឃើញថ្លៃទំនិញជាលុយដុល្លា</pre>
             <button onclick="copyText('pretext2')" id="pdd1">Copy Text</button>
         </div>
-        <script>
-            function copyText(elementId) {
-  var preText = document.getElementById(elementId);
-  var textToCopy = preText.innerText;
-
-  // Create a temporary textarea element
-  var tempTextarea = document.createElement('textarea');
-  tempTextarea.value = textToCopy;
-  document.body.appendChild(tempTextarea);
-
-  // Select the text in the textarea
-  tempTextarea.select();
-  tempTextarea.setSelectionRange(0, 99999); // For mobile devices
-
-  try {
-    // Attempt to copy the selected text to the clipboard
-    var successful = document.execCommand('copy');
-    var message = successful ? 'Text copied to clipboard' : 'Unable to copy text';
-    console.log(message);
-  } catch (err) {
-    console.error('Error copying text', err);
-  } finally {
-    // Remove the temporary textarea
-    document.body.removeChild(tempTextarea);
-  }
-}
-</script>
+        <script src="project1.js"></script>
 </body>
 </html>
