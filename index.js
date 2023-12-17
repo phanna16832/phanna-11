@@ -32,6 +32,7 @@ function performSearch() {
     { titles: ["telegram", "纸飞机"], file: "telegramSave reply.html" },
     { titles: ["ccsl"], file: "ccsl.html" },
     { titles: ["fee", "运费"], file: "calculate.html" },
+    { titles: ["taobao", "pinduoduo"], file: "project1.html" },
     // Add more results as needed
   ];
 
