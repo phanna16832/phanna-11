@@ -46,10 +46,11 @@ nav a:hover {
     border-color: red;
     border-radius: 10px;
 }
-.pdd1 img{
-        width: 400px;
-        height: 5%;
+.pdd1 .pdd-img {
+    max-width:  40%; /* Ensure the image does not exceed the width of its container */
+    height: 10%; /* Maintain the aspect ratio of the image */
 }
+
 .pdd1 pre{
     white-space: pre-wrap;
     font-size: 1rem;
