@@ -63,15 +63,9 @@ nav a:hover {
     border-radius: 10px;
     border-style: solid;
 }
-#tb1{
+button{
     color : grey;
     background-color: orange;
-    font-weight: bolder;
-    border-radius: 10px;
-    border-style: solid;
-}#pdd1{
-    color : grey;
-    background-color: red;
     font-weight: bolder;
     border-radius: 10px;
     border-style: solid;
