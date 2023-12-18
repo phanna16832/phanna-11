@@ -1,92 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FB/Home</title>
-  <!-- Your existing head content -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="index.css">
-  <link rel="icon" type="image/x-icon" href="img/home.png">
-  <!-- Font styles -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Freehand&family=Hanuman:wght@100&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FB/Home_page</title>
+    <link rel="shortcut icon" href="hompage favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+    <!--font style-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&family=Siemreap&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <h1>Phanna Save reply</h1>
-  <!-- dropdown nav -->
-  <div class="navbar">
-    <a href="https://www.notion.so/Phanna-s-save-replies-12ee8f603df04731bdfb72bcc9f4454e" target="_blank">save reply in notion</a>
-    <a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E5%BF%AB%E9%80%92%E5%8D%95%E5%8F%B7&fenlei=256&rsv_pq=0xb78a6f2a00315d71&rsv_t=89ccEI8q22taCZZ3h%2F%2BfF6kFV2rJDP3LNV4lfe87fj4u9mA0fNQmCt0jVV0s&rqlang=en&rsv_dl=tb&rsv_enter=1&rsv_sug3=13&rsv_sug1=11&rsv_sug7=100&rsv_sug2=0&rsv_btype=i&inputT=10855&rsv_sug4=10855&rsv_sug=1" target="_blank"">百度查询包裹</a>
-    <a href="https://docs.google.com/spreadsheets/d/107J3934iU_dMt-ZtA27cvWECWRAD02cE_7UY69lagrk/edit#gid=0" target="_blank" title="recommend items">Recommend items</a>
-    <a href="project1.html">Order app</a>
-    <div class="dropdown">
-      <button class="dropbtn" onclick="toggleDropdown('myDropdown1')"> My file
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content" id="myDropdown1">
-        <a href="https://docs.google.com/spreadsheets/d/1N331vNvTQPqhFt07I-UeBkTPusGNnM1x9pPehghmTXs/edit#gid=0&fvid=851391132" target="_blank">11 Tracking report</a>
-        <a href="https://docs.google.com/spreadsheets/d/1N8eHwElTht6C4j9zcHmaLkHB0qgtYqPmpKu_dhTpuFk/edit#gid=311748528" target="_blank">10 tracking report</a>
-        <a href="https://docs.google.com/spreadsheets/d/13BDA9q3bSlzKZ9LQKOKJcNVrW7JSzdXXqjqlCMr50Gk/edit#gid=498463738" target="_blank">Recheck Nov shipment</a>
-        <a href="https://docs.google.com/spreadsheets/d/1-MV14kLqsMq8GLcr15E-wx0g-PiCujgCyriMCVipcHU/edit#gid=0" target="_blank">Dec Tracking report</a>
-      </div>
-    </div>
+    <!-- navigation bar-->
+    <nav>
+        <ul>
+            <li><a href="https://www.notion.so/Phanna-s-save-replies-12ee8f603df04731bdfb72bcc9f4454e" target="_blank">save reply in notion</a></li>
+             <li><a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E5%BF%AB%E9%80%92%E5%8D%95%E5%8F%B7&fenlei=256&rsv_pq=0xb78a6f2a00315d71&rsv_t=89ccEI8q22taCZZ3h%2F%2BfF6kFV2rJDP3LNV4lfe87fj4u9mA0fNQmCt0jVV0s&rqlang=en&rsv_dl=tb&rsv_enter=1&rsv_sug3=13&rsv_sug1=11&rsv_sug7=100&rsv_sug2=0&rsv_btype=i&inputT=10855&rsv_sug4=10855&rsv_sug=1" target="_blank"">百度查询包裹</a></li>
+             <li><a href="https://docs.google.com/spreadsheets/d/107J3934iU_dMt-ZtA27cvWECWRAD02cE_7UY69lagrk/edit#gid=0" target="_blank" title="recommend items">Recommend items</a></li>
+             <li><a href="project1.html">Order app</a>
+        </ul>
+        
+        <!-- dropdown -->
+        <div class="myfile"> 
+            <button>Phanna File Report</button>
+            <div class="content"`>
+                <a href="https://docs.google.com/spreadsheets/d/1N331vNvTQPqhFt07I-UeBkTPusGNnM1x9pPehghmTXs/edit#gid=0&fvid=851391132" target="_blank">11 Tracking report</a>
+                <a href="https://docs.google.com/spreadsheets/d/1N8eHwElTht6C4j9zcHmaLkHB0qgtYqPmpKu_dhTpuFk/edit#gid=311748528" target="_blank">10 tracking report</a>
+                <a href="https://docs.google.com/spreadsheets/d/13BDA9q3bSlzKZ9LQKOKJcNVrW7JSzdXXqjqlCMr50Gk/edit#gid=498463738" target="_blank">Recheck Nov shipment</a>
+                <a href="https://docs.google.com/spreadsheets/d/1-MV14kLqsMq8GLcr15E-wx0g-PiCujgCyriMCVipcHU/edit#gid=0" target="_blank">Dec Tracking report</a>
+            </div>
+        </div>
 
-    <!-- Second Dropdown -->
-    <div class="dropdown">
-      <button class="dropbtn" onclick="toggleDropdown('myDropdown2')"> Menu
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content" id="myDropdown2">
-        <a href="telegramSave reply.html">telegram save reply</a>
-        <a href="ccsl.html">save reply with ccsl</a>
-        <a href="#">Save reply with fs warehouse</a>
-        <a href="calculate.html">Land transportation fee</a>
-      </div>
+        <!-- dropdown -->
+        <div class="sp">
+            <button>Another save reply</button>
+            <div class="content">
+                <a href="telegramSave reply.html">telegram save reply</a>
+                <a href="ccsl.html">save reply with ccsl</a>
+                <a href="#">Save reply with fs warehouse</a>
+                <a href="calculate.html">Land transportation fee</a>
+            </div>
+        </div>
+     </nav>
+     <hr>
+     <br>
+     <h1>Phanna Save Reply</h1>
+     
+     <!-- search bar -->
+     <input type="text" id="searchBar" placeholder="Search...">
+     <button id="searchButton">Search</button>
+     <div id="searchResults"></div><br>
+     
+     <!--Save replies facebook-->
+     <div class="text">
+        <pre id="pretext"> Password:888888 ID:  លេខទូរសព្ទ័: 0 </pre>
+        <button onclick="copyText('pretext')">ចម្លង</button>
     </div>
-    </div><br>
-  <!-- Inside the <body> tag, after the existing content -->
-<input type="text" id="searchBar" placeholder="Search...">
-<button onclick="performSearch()">Search</button>
-<div id="searchResults"></div>
-<!--Save replies facebook-->
     <div class="text">
-      <h4>facebook Save replie</h4>
-      <pre id="pretext1">
-        សួស្តីបង 
-  ពត៌មានរបៀបប្រើសេវាជួយទិញទំនិញដោយឥតគិតថ្លៃ : https://shorturl.at/pqQW6
-  Join Telegram Group ជួយទិញ: https://t.me/+CyEdYOtceZkwZjQ1
-  បងសូមចុចចុះឈ្មោះតាមលីងនេះសិនមកបង
-  https://m.ceccsl.com/reg/khmindex?tj
-  Telegram ក្រុមការងារបញ្ជាទិញ : https://t.me/CE_EXPRESS
-
-  *សំរាប់ការការបង្រៀនទិញបងអាចទាក់ទងតេឡេក្រាមខាងក្រោមបាន 
-  https://t.me/+zaVpyk9lVlI2YmU1
-  ជួយទិញ និង បង្រៀនទិញទំនិញពីប្រទេសចិនដោយឥតគិតថ្លៃ ជាមួយក្រុមហ៊ុនស៊ីអ៊ី 
-      </pre>
-      <button onclick="copyText('pretext1')">ចម្លង</button>
-    </div>
-   <!-- for customer buy product from live-->
-   <div class="text">
-      <h4 > save reply for customer who want to buy product from live</h4>
-      <pre>
-        សួស្តីបងចំពោះការបញ្ជាទិញទំនិញតាមរយៈការ live សូមបងជួយទាក់ទងទៅកាន់តេលេក្រាមក្រុមការងារខាងប្អូនបានណាបង 
-        👉👉👉 https://t.me/Customerservice456
+        <h4>facebook Save replie</h4>
+        <pre id="pretext1">
+          សួស្តីបង 
+    ពត៌មានរបៀបប្រើសេវាជួយទិញទំនិញដោយឥតគិតថ្លៃ : https://shorturl.at/pqQW6
+    Join Telegram Group ជួយទិញ: https://t.me/+CyEdYOtceZkwZjQ1
+    បងសូមចុចចុះឈ្មោះតាមលីងនេះសិនមកបង
+    https://m.ceccsl.com/reg/khmindex?tj
+    Telegram ក្រុមការងារបញ្ជាទិញ : https://t.me/CE_EXPRESS
+  
+    *សំរាប់ការការបង្រៀនទិញបងអាចទាក់ទងតេឡេក្រាមខាងក្រោមបាន 
+    https://t.me/+zaVpyk9lVlI2YmU1
+    ជួយទិញ និង បង្រៀនទិញទំនិញពីប្រទេសចិនដោយឥតគិតថ្លៃ ជាមួយក្រុមហ៊ុនស៊ីអ៊ី 
         </pre>
+        <button onclick="copyText('pretext1')">ចម្លង</button>
       </div>
-      <!--save reply for recommend item-->
-  <div class="text">
-  <h4>Reply chat recomment items in fb</h4>
-  <pre id="pretext2">
-    បងជួយធ្វើការចុចទៅលីងដែលខាងប្អូនផ្ញើទៅខាងលើនេះបន្តិចដើម្បីអាចធ្វើការជ្រើសម៉ូត ពណ៌ ទំហំ នឹងចំនួនទំនិញដែលបងចង់កម្មង់screenshort  នឹងcopy linkដែលប្អូនផ្ញើជូន ផ្ញើទៅកាន់តេលេក្រាមនឹងមានក្រុមការងារខាងប្អូនធ្វើការបញ្ជាទិញជូន
-
-    - ក្នុងករណីបងមិនទាន់បានចុះឈ្មោះប្រើប្រាស់អេបtaobaoទេ
-    សូមបងធ្វើការចុះឈ្មោះជាមួយ​គណនីអ៊េបទំនិញចិន Taobao: https://youtu.be/w-8KJqb2FCM
-  </pre>
-  <button onclick="copyText('pretext2')">Copy Text</button>
+     
+     <!-- for customer buy product from live-->
+     <div class="text">
+        <h4 > save reply for customer who want to buy product from live</h4>
+        <pre pretext2>
+          សួស្តីបងចំពោះការបញ្ជាទិញទំនិញតាមរយៈការ live សូមបងជួយទាក់ទងទៅកាន់តេលេក្រាមក្រុមការងារខាងប្អូនបានណាបង 
+          👉👉👉 https://t.me/Customerservice456
+          </pre>
+          <button onclick="copyText('pretext2')">Copy Text</button>
+        </div>
+        
+        <!--save reply for recommend item-->
+        <div class="text">
+            <h4>Reply chat recomment items in fb</h4>
+            <pre id="pretext2">
+      បងជួយធ្វើការចុចទៅលីងដែលខាងប្អូនផ្ញើទៅខាងលើនេះបន្តិចដើម្បីអាចធ្វើការជ្រើសម៉ូត ពណ៌ ទំហំ នឹងចំនួនទំនិញដែលបងចង់កម្មង់screenshort  នឹងcopy linkដែលប្អូនផ្ញើជូន ផ្ញើទៅកាន់តេលេក្រាមនឹងមានក្រុមការងារខាងប្អូនធ្វើការបញ្ជាទិញជូន
+  
+      - ក្នុងករណីបងមិនទាន់បានចុះឈ្មោះប្រើប្រាស់អេបtaobaoទេ
+      សូមបងធ្វើការចុះឈ្មោះជាមួយ​គណនីអ៊េបទំនិញចិន Taobao: https://youtu.be/w-8KJqb2FCM
+    </pre>
+    <button onclick="copyText('pretext2')">Copy Text</button>
 </div>
-<script src="index.js"></script>
+  
+  <script src="index.js"></script>
 </body>
 </html>
