@@ -86,10 +86,12 @@ nav ul a {
 }
 
 /* Section styles */
-.text {
-    padding: 20px;
+.text{
+    padding: 0px;
     font-family: 'Siemreap';
     font-size: 1.4rem;
+    border: 1px solid red;
+    border-radius: 10px;
 }
 
 .text h4 {
@@ -132,6 +134,7 @@ nav ul a {
 .text button:hover{
     background-color: orange;
 }
+
 
 /* Responsive styles */
 @media only screen and (min-width: 768px) {
