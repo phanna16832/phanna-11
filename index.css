@@ -28,6 +28,10 @@ nav ul a {
     padding: 10px;
     color: #00eeff;
 }
+ nav a:hover{
+    background: #00eeff;
+    color: red;
+ }
 
 /* Dropdown styles */
 .myfile,
@@ -42,7 +46,7 @@ nav ul a {
     color: #00eeff;
     background-color: #8f2883;
     text-align: center;
-    padding: 10px;
+    padding: 0;
     cursor: pointer;
 }
 
@@ -106,6 +110,10 @@ nav ul a {
     border: none;
     cursor: pointer;
 }
+#searchButton:hover{
+    color: red;
+    background-color: orange;
+}
 
 #searchResults {
     margin-top: 20px;
@@ -120,6 +128,9 @@ nav ul a {
     border-radius: 15px;
     color: white;
     cursor: pointer;
+}
+.text button:hover{
+    background-color: orange;
 }
 
 /* Responsive styles */
