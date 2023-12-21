@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myH1"></h1>
+    <label> usernane</label>
+    <input id="myText"> <br><br>
+    <button id="mySubmit">Submit</button><br><br>
+
+    <label> Name</label>
+    <input type="text"  id="text">
+    <label> Name</label>
+    <input type="text"  id="text1">
+    <button onclick="love()"> click on me</button>
+    <span id="result"></span>
+
+    <script>
+        let username;
+        document.getElementById("mySubmit").onclick = function(){
+            username = document.getElementById("myText").value;
+            document.getElementById("myH1").textContent = "Hello " + username;
+        }
+
+        function love() {
+            var x = document.getElementById("text").value;
+            var y = document.getElementById("text1").value;
+            document.getElementById("result").textContent = x + " love " + y;
+        }
+    </script>
+</body>
+</html>

@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const m = document.getElementById("text").value;
       const w = document.getElementById("text1").value;
       var a = m + " loves " + w;
-      document.getElementById("result").textContent = a;
+      document.getElementById("result").innerHTML = a;
     }
   });
   
