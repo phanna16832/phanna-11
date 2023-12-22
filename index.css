@@ -92,6 +92,7 @@ nav ul a {
     font-size: 1.4rem;
     border: 1px solid red;
     border-radius: 10px;
+    word-wrap: break-word;
 }
 
 .text h4 {
