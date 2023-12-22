@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1 id="myH1"></h1>
-    <label> usernane</label>
+    <label> username</label> <!-- Fixed the typo in "username" -->
     <input id="myText"> <br><br>
     <button id="mySubmit">Submit</button><br><br>
 
@@ -18,8 +18,15 @@
     <button onclick="love()"> click on me</button>
     <span id="result"></span>
 
+    <h4>Input </h4>
+    <label> put your name</label>
+    <input id="age" placeholder="how old are you?"><br><br>
+    <button onclick="checkAge()">click</button>
+    <span id="age2"></span>
+
     <script>
         let username;
+
         document.getElementById("mySubmit").onclick = function(){
             username = document.getElementById("myText").value;
             document.getElementById("myH1").textContent = "Hello " + username;
@@ -30,6 +37,22 @@
             var y = document.getElementById("text1").value;
             document.getElementById("result").textContent = x + " love " + y;
         }
+
+        function checkAge() {
+    var ageInput = document.getElementById("age").valueAsNumber;
+    var output = document.getElementById("age2");
+
+    if (isNaN(ageInput)) {
+        output.textContent = "Please enter a valid age.";
+    } else if (ageInput < 18) {
+        output.textContent = "kmeng jg kom ton al mean ss";
+    } else if (ageInput >= 18 && ageInput <= 99) {
+        output.textContent = "single dol na";
+    } else {
+        output.textContent = "jas hv rok ss tt";
+    }
+}
+
     </script>
 </body>
 </html>

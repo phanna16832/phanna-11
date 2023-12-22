@@ -1,22 +1,13 @@
-document.addEventListener("DOMContentLoaded", function () {
-    var x = Math.pow(2, 0);
-    console.log(x);
-  
-    // round
-    var y = Math.sqrt(12);
-    const xX = Math.round(y);
-    console.log(xX);
-  
-    // ceil
-    var xY = Math.ceil(y);
-    console.log(xY);
-  
-    // function
-    function love() {
-      const m = document.getElementById("text").value;
-      const w = document.getElementById("text1").value;
-      var a = m + " loves " + w;
-      document.getElementById("result").innerHTML = a;
-    }
-  });
-  
+var input = document.getElementById("age").valuAsNumber;
+var output = document.getElementById("age2");
+function age(){
+  if(input <=99){
+    output.textContent = "jas hv rok ss tt";
+  }
+  else if (input >=18){
+    output.textContent = "single dol na";
+  }
+  else if (input <18){
+    output.textContent = "kmeng jg kom ton al mean ss";
+  }
+}
