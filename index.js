@@ -1,3 +1,4 @@
+//search bar
 document.addEventListener("DOMContentLoaded", function () {
     var searchButton = document.getElementById('searchButton');
     searchButton.addEventListener('click', performSearch);
@@ -12,10 +13,10 @@ function performSearch() {
         // Perform your search logic here
         var data = [
             { title: "Telegram", file: "telegramSave reply.html" },
-            { title: "CCSL", file: "ccsl.html", img: "ccsl-image.jpg", text: "Description for CCSL" },
+            { title: "CCSL", file: "ccsl.html"},
             { title: "Fee Calculation", file: "calculate.html"},
             { title: "Taobao and Pinduoduo", file: "project1.html", img: "taobao1.jpg"},
-            { title: "id and CE ID", text: "Password:888888 ID:  លេខទូរសព្ទ័: 0 " }
+            { title: "id and CE ID", text: "Password:888888 ID:  លេខទូរសព្ទ័: 0 ", file: "#" }
             // { title: "id and CE ID", file: " ", text: "Password:888888 ID:  លេខទូរសព្ទ័: 0 " }
             // Add more results as needed
         ];
@@ -67,7 +68,6 @@ function displayResults(results) {
         searchResultsContainer.appendChild(resultItem);
     });
 }
-
 
 function clearResults() {
     var searchResultsContainer = document.getElementById('searchResults');
