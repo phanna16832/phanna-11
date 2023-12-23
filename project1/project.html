@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="project.css">
 </head>
 <body>
     <nav>
@@ -40,34 +40,32 @@
     <h1 id="myH1"></h1>
     <label> username</label> <!-- Fixed the typo in "username" -->
     <input id="myText"> <br><br>
-    <button id="mySubmit">Submit</button><br><br>
+    <button id="mySubmit" onclick="submitUsername()">Submit</button><br><br>
 
     <label> Name</label>
-    <input type="text"  id="text">
+    <input type="text"  id="text"><br><br>
     <label> Name</label>
-    <input type="text"  id="text1">
-    <button onclick="love()"> click on me</button>
+    <input type="text"  id="text1"><br><br>
+    <button onclick="love()"> click on me</button><br>
     <span id="result"></span>
 
-    <h4>Input </h4>
+    <h4>Age </h4>
     <label> put your name</label>
-    <input id="age" placeholder="how old are you?" type="number"><br><br>
-    <button onclick="checkAge()">click</button>
+    <input id="age" type="number" placeholder="how old are you?" max="100" min="1"><br><br>
+    <button onclick="checkAge()">click</button><br><br>
     <span id="age2"></span>
     
     <script>
         // JavaScript code
-function submitUsername() {
-    let username = document.getElementById("myText").value;
-    document.getElementById("myH1").textContent = "Hello " + username;
-}
-
-function love() {
+         function submitUsername() {
+        let username = document.getElementById("myText").value;
+        document.getElementById("myH1").textContent = "Hello " + username;
+    }
+    function love() {
     var x = document.getElementById("text").value;
     var y = document.getElementById("text1").value;
     document.getElementById("result").textContent = x + " loves " + y;
 }
-
 function checkAge() {
     var ageInput = document.getElementById("age").valueAsNumber;
     var output = document.getElementById("age2");
@@ -78,9 +76,11 @@ function checkAge() {
         output.textContent = "kmeng jg kom ton al mean ss";
     } else if (ageInput <= 45) {
         output.textContent = "kal yok ss";
-    } else {
-        output.textContent = "Jas hv jg ban ss tt";
+    } else if (ageInput <=60){
+        output.textContent ="jas jg kom ton yok ss";
     }
+    else if(ageInput >60)
+    output.textContent ="";
 }
 
     </script>
