@@ -28,10 +28,11 @@ nav ul a {
     padding: 10px;
     color: #00eeff;
 }
- nav a:hover{
+
+nav a:hover {
     background: #00eeff;
     color: red;
- }
+}
 
 /* Dropdown styles */
 .myfile,
@@ -87,23 +88,22 @@ nav ul a {
 
 /* Section styles */
 
-.text {
-    padding: 0px;
+.text,
+.text1 {
+    padding: 10px;
     font-family: 'Siemreap';
-    font-size: 1.4rem;
-    border:  solid red;
+    font-size: 1.2rem;    border: solid red;
     border-radius: 10px;
     white-space: pre-wrap;
     word-wrap: break-word;
     max-width: 100%;
 }
-.text1{
-padding: 0px;
-font-family: 'Siemreap';
-font-size: 1.4rem;
-text-align: start;
+
+.text h4 {
+    color: #8f2883;
 }
-.text h4{
+
+.text h4 {
     color: #8f2883;
 }
 
@@ -121,7 +121,8 @@ text-align: start;
     border: none;
     cursor: pointer;
 }
-#searchButton:hover{
+
+#searchButton:hover {
     color: red;
     background-color: orange;
 }
@@ -132,7 +133,7 @@ text-align: start;
 
 /* Button styles in the section */
 .text button,
-.text1 button{
+.text1 button {
     margin-top: 10px;
     padding: 10px;
     background-color: #8f2883;
@@ -141,42 +142,44 @@ text-align: start;
     color: white;
     cursor: pointer;
 }
-.text button:hover{
+
+.text button:hover {
     background-color: orange;
 }
 
-
 /* Responsive styles */
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 767px) {
     nav ul {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
     }
 
     nav ul li {
         float: none;
-        margin: 0 10px;
+        margin: 0;
     }
 
     .myfile,
     .sp {
-        display: inline-block;
+        display: block;
+        margin: 10px 0;
     }
 
     .myfile button,
     .sp button {
         padding: 15px;
+        width: 100%;
     }
 
     .myfile a,
     .sp a {
         padding: 15px;
+        width: 100%;
     }
 
     .text {
-        padding: 20px;
+        padding: 15px;
+        font-size: 1rem;
     }
-
-    /* Add more styles for larger screens as needed */
 }
-
