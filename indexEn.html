@@ -122,6 +122,83 @@
 </pre>
 <button type="button" class="btn btn-primary btn-sm" onclick="copyText('pretext3')">Small button</button>
 </div>
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap: framework for CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h1>Hello</h1>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Price (￥)</th>
+            <th scope="col">Rate</th>
+            <th scope="col">Price ($)</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>ទឹកប្រាក់លុយយ៉ន 300ចុះក្រោម  ចែក 6.0     </td>
+            <td><input type="number" id="num"></td>
+            <td>6</td>
+            <td><button onclick="calculate()">click</button></td>
+        </tr>
+          <tr>
+            <th scope="row"><span id="pretext4"></span></th>
+            <th><button onclick="copyText('pretext4')">Copy</button></th>
+          </tr>
+          <!---6.1-->
+          <tr>
+            <td>ទឹកប្រាក់លុយយ៉ន 310 ទៅ 610 ចែក 6.10   </td>
+            <td><input type="number" id="num1"></td>
+            <td>6.1</td>
+            <td><button onclick="calculate1()">click</button></td>
+          </tr>
+          <tr>
+            <th scope="row"><span id="pretext5"></span></th>
+            <th><button onclick="copyText('pretext5')">Copy</button></th>
+          </tr>
+          <!---6.2-->
+          <tr>
+            <td>ទឹកប្រាក់លុយយ៉ន 620 ទៅ 6200 ចែក 6.20    </td>
+            <td><input type="number" id="num2"></td>
+            <td>6.2</td>
+            <td><button onclick="calculate2()">click</button></td>
+          </tr>
+          <tr>
+            <th scope="row"><span id="pretext6"></span></th>
+            <th><button onclick="copyText('pretext6')">Copy</button></th>
+
+          </tr>
+          <!---6.4-->
+        <tr>
+            <td>ទឹកប្រាក់លុយយ៉ន 6310 ឡើងទៅ ចែក 6.40 </td>
+            <td><input type="number" id="num3"></td>
+            <td>6.4</td>
+            <td><button onclick="calculate3()">click</button></td>
+        </tr>
+        <tr>
+             <th scope="row"><span id="pretext7"></span></th>
+             <th><button onclick="copyText('pretext7')">Copy</button></th>
+        </tr>
+            
+
+        </tbody>
+      
+    </table>
+
+    <script src="num.js"></script>
+</body>
+</html>
+
 
 <script src="index.js"></script>
 </body>
