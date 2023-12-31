@@ -22,6 +22,11 @@ nav a:hover {
     background-color: #fcba03;
     color:  #0328fc;
 }
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 .taobao{
     border-style: outset;
     border-radius: 25px;
