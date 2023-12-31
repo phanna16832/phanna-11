@@ -1,3 +1,4 @@
+//search code
 document.addEventListener("DOMContentLoaded", function () {
     var searchForm = document.getElementById('searchForm');
     searchForm.addEventListener('submit', performSearch);
@@ -14,7 +15,7 @@ function performSearch(event) {
             { title: "CCSL", file: "ccsl.html"},
             { title: "Fee Calculation", file: "calculate.html"},
             { title: "Taobao and Pinduoduo", file: "project1.html", img: "taobao1.jpg"},
-            { title: "id and CE ID", text: "Password:888888 ID:  លេខទូរសព្ទ័: 0 ", file: "#" }
+            { title: "id and CE ID", text: "Password:888888 ID:  លេខទូរសព្ទ័: 0 ", file: "#" }  
             // Add more results as needed
         ];
 
@@ -60,6 +61,7 @@ function clearResults() {
     var searchResultsContainer = document.getElementById('searchResults');
     searchResultsContainer.innerHTML = '';
 }
+
 
 //calcultion
 function calculate() {
@@ -122,6 +124,7 @@ function calculate5() {
     resultSpan.textContent = "សួស្តីបង សរុបហាងទំនិញទាំងអស់ " + "￥"+  num.value + " ចែក 6.8 = " + (cal).toFixed(2) + "$"
 }
 
+
 //copy text button//
 function copyText(elementId) {
     var preText = document.getElementById(elementId);
@@ -166,3 +169,12 @@ function copyText(elementId) {
         document.body.removeChild(tempTextarea);
     }
 }
+
+//footer
+var currentDate = new Date();
+
+// Format the date as a string
+var dateString = currentDate.toDateString();
+
+// Display the date in the footer
+document.getElementById("date").textContent = ("Current Date: " + dateString);
