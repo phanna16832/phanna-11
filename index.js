@@ -178,3 +178,21 @@ var dateString = currentDate.toDateString();
 
 // Display the date in the footer
 document.getElementById("date").textContent = ("Current Date: " + dateString);
+
+//text js
+
+function text() {
+    // Get the values from the input fields
+    var text1 = parseFloat(document.getElementById("p1").value) || 0;
+    var text2 = parseFloat(document.getElementById("p2").value) || 0;
+  
+    // Calculate the result
+    var result;
+    if (text1 > text2) {
+        result = text1 - text2;
+        document.getElementById("p3").textContent = "支付总额: សរុបទឹកប្រាក់ត្រូវបង់: " + result.toFixed(2);
+    } else {
+        result = text2 - text1;
+        document.getElementById("p4").textContent = "总退款金额: សរុបទឹកប្រាក់ត្រូវសងត្រលប់ " + result.toFixed(2);
+    }
+}

@@ -135,6 +135,9 @@ button{
   cursor: pointer;
   transition: background-color 0.3s;
 }
+button:hover{
+  background-color: pink ;
+}
 /* Responsive Styles */
 @media screen and (max-width: 600px) {
   nav a, .dropdown .dropbtn {
