@@ -6,7 +6,7 @@ function calculateLandFee(nextInputId) {
     var volume = (width * height * length) / 6000;
 
     // Check if either volume or weight is equal to or over 100,000
-    if (volume >= 100000 || weight >= 100000) {
+    if (volume >= 5000 || weight >= 5000) {
         document.getElementById("notify").innerText = "សូមបញ្ជាក់: ទំនិញនេះជាប្រភេទម៉ែត្រគីប!";
         return; // Stop further calculations
     }
