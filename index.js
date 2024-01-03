@@ -179,9 +179,9 @@ var dateString = currentDate.toDateString();
 // Display the date in the footer
 document.getElementById("date").textContent = ("Current Date: " + dateString);
 
-//text js
+//recal js
 
-function text() {
+function recal1() {
     // Get the values from the input fields
     var text1 = parseFloat(document.getElementById("p1").value) || 0;
     var text2 = parseFloat(document.getElementById("p2").value) || 0;
@@ -195,4 +195,15 @@ function text() {
         result = text2 - text1;
         document.getElementById("p4").textContent = "总退款金额: សរុបទឹកប្រាក់ត្រូវសងត្រលប់ " + result.toFixed(2);
     }
+}
+
+//subtotal
+function subTotal() {
+    var n = document.getElementById("n1").valueAsNumber;
+    var n1 = document.getElementById("n2").valueAsNumber;
+    var n2 = document.getElementById("n3").valueAsNumber;
+    var price = document.getElementById("price");
+
+    const subTotal = n + n1 + n2;
+    price.textContent = "តម្លៃទំនិញសរុប: " + subTotal;
 }
