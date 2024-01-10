@@ -33,7 +33,23 @@
     button:hover {
       background-color: blueviolet;
     }
-  </style>
+    
+    .classcontent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text1,
+.recalculate {
+    flex: 1 2 calc(50% - 20px); /* Adjust the width as needed, subtracting margin */
+    margin: 5px; /* Add margin for spacing between elements */
+}
+.recalculate > #r,
+.recalculate > #r1 {
+    color: pink;
+    font-size: .9rem;
+}
+</style>
 </head>
 
 <body>
@@ -250,29 +266,27 @@ https://t.me/+zaVpyk9lVlI2YmU1
 
     </tbody>
   </table>
-  
-  <!--total n n1 n2 = num-->
-  <div>
-    <label>តម្លៃទំនិញ1  : </label>
-    <input type="number" id="n1"><br><br>
-    <label>តម្លៃទំនិញ2  : </label>
-    <input type="number" id ="n2"><br><br>
-    <label>តម្លៃទំនិញ3  : </label>
-    <input type="number" id ="n3"><br><br>
-    <button onclick="subTotal()">គណនា</button>
-    <span id="price"></span>
+  <div class="classcontent">
+    <div class="text">
+      <h4>Updated promotion CE Chuytinh on 07/01 - 31/01</h4>
+      <label>តម្លៃទំនិញ: </label>
+      <input type="number" id="price" ><br><br>
+      <span id="result"></span><br><br>
+      <button onclick="total()">Calculate</button>
+      <button onclick="copyText('result')">Copy</button>
+  </div>
+    <div class="recalculate">     <!-- r =result n= number-->
+        <label>新订单总额: សរុបទឹកប្រាក់កុម្ម៉ង់ថ្មី: </label>
+        <input type="number" id="n"><br><br>
+        <label>总退款: សរុបទឹកប្រាក់សងត្រលប់: </label>
+        <input type="number" id="n1"><br><br>
+        <span id="r"></span>
+        <span id="r1"></span>
+        <button onclick="subtotal()">គណនា</button>
+        <button onclick="copyText1()">ចម្លង</button>
+    </div>
 </div>
-  
-<div id="recal"> <!-- recal = recalculation -->
-    <pre>新订单总额: សរុបទឹកប្រាក់កុម្ម៉ង់ថ្មី: <input type="number" id="p1"></pre>
-    <pre>总退款: សរុបទឹកប្រាក់សងត្រលប់: <input type="number" id="p2"></pre>
-    <pre id="p3"></pre>
-    <pre id="p4"></pre>
-</div>
-<button onclick="recal1()">Calculate</button>
-<button onclick="copyText('recal')">Copy</button><br><br>
- 
-  <footer>
+<footer>
     <pre>
     &copy; this website is created for practice code only
   <span id="date"></span>

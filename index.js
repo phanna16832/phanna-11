@@ -133,38 +133,58 @@ function calculate5() {
 
     resultSpan.textContent = "សួស្តីបង សរុបហាងទំនិញទាំងអស់ " + "￥"+  num.value + " ចែក 6.8 = " + (cal).toFixed(2) + "$"
 }
+//promotion1
+total = () => {
+    var p = document.getElementById("price").valueAsNumber;
+    var result = document.getElementById("result");
+    var calculate =  (p/6.4).toFixed(2)
+    result.textContent = "Promotion អត្រាប្តូរប្រាក់ពិសេសទៅដល់ 6.4¥ ចាប់ពីថ្ងៃទី 7 រហូតដល់ 31 មករា 2024 "+ " "+"\nសួស្តីបង សរុបហាងទំនិញទាំងអស់" +"￥" +  p + " ចែក 6.4 = " + calculate + "$" +
+     "\n " + "\n***បញ្ជាក់: ចំពោះទំនិញទិញក្នុងហាងតែមួយ ប្រសិនខាងហាងបំបែកកញ្ចប់ទំនិញ ខាងប្អូននឹងរាប់កញ្ចប់ទំនិញគិតថ្លៃដឹកតាមចំនួនកញ្ចប់ទំនិញដូចគ្នា សំរាប់កញ្ចប់ដែលក្រោម1គីឡូ ខាងប្អូនគិតមួយគីឡូ លើស1គីឡូយក ទំហំនិង ទម្ងង់ប្រៀបធៀបគ្នាមួយណាធំជាងយកមួយនឹងជាគោលគិតថ្លៃដឹកជញ្ចូន"+ "\n" + "\nចំពោះសេវាជួយទិញគឺមិនមានការបង្រួមកញ្ចប់ទំនិញទេបង"
+}
+// total
+function subtotal() {
+    var n = document.getElementById("n").valueAsNumber;
+    var n1 = document.getElementById("n1").valueAsNumber;
+    var calculate;
 
-//recal js
-function recal1() {
-    // Get the values from the input fields
-    var text1 = parseFloat(document.getElementById("p1").value) || 0;
-    var text2 = parseFloat(document.getElementById("p2").value) || 0;
-  
-    // Calculate the result
-    var result;
-    if (text1 > text2) {
-        result = text1 - text2;
-        document.getElementById("p3").textContent = "支付总额: សរុបទឹកប្រាក់ត្រូវបង់: " + result.toFixed(2);
-    } 
-    else {
-        result = text2 - text1;
-        document.getElementById("p4").textContent = "总退款金额: សរុបទឹកប្រាក់ត្រូវសងត្រលប់ " + result.toFixed(2);
+    if (n > n1) {
+        calculate = n - n1;
+        document.getElementById("r").textContent = "支付总额: សរុបទឹកប្រាក់ត្រូវបង់: " + calculate + "$";
+        // Clear the content of the other span
+        document.getElementById("r1").textContent = "";
+    } else {
+        calculate = n1 - n;
+        document.getElementById("r1").textContent = "总退款金额: សរុបទឹកប្រាក់ត្រូវសងត្រលប់ " + calculate +"$";
+        // Clear the content of the other span
+        document.getElementById("r").textContent = "";
     }
-    
+}
+function copyText1() {
+    var n = document.getElementById("n").value;
+    var n1 = document.getElementById("n1").value;
+    var resultElement = document.getElementById("r");
+    var resultElement1 = document.getElementById("r1");
+    var resultText = resultElement.textContent;
+    var resultText1 = resultElement1.textContent;
+
+    // Combine input values and result text
+    var textToCopy = "新订单总额: សរុបទឹកប្រាក់កុម្ម៉ង់ថ្មី:" + n + "$" + "\n总退款: សរុបទឹកប្រាក់សងត្រលប់: " + n1 + "$" + "\n" + resultText + "\n" + resultText1;
+
+    try {
+        // Use the Clipboard API to copy the text
+        navigator.clipboard.writeText(textToCopy)
+            .then(function() {
+                // Alert or notify the user (optional)
+            })
+            .catch(function(err) {
+                console.error("Unable to copy to clipboard:", err);
+            });
+    } catch (err) {
+        console.error("Clipboard API not supported:", err);
+    }
 }
 
-//subtotal
-function subTotal() {
-    var n = document.getElementById("n1").valueAsNumber;
-    var n1 = document.getElementById("n2").valueAsNumber;
-    var n2 = document.getElementById("n3").valueAsNumber;
-    var price = document.getElementById("price");
-
-    const subTotal = n + n1 + n2;
-    price.textContent = "តម្លៃទំនិញសរុប: " + subTotal;
-}
-
-//copy paste .js
+//copy text
 function copyText(elementId) {
     var element = document.getElementById(elementId);
 
@@ -193,6 +213,7 @@ function copyText(elementId) {
         document.body.removeChild(tempTextarea);
     }
 }
+
 
 
 //footer
