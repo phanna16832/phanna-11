@@ -150,6 +150,7 @@ function recal1() {
         result = text2 - text1;
         document.getElementById("p4").textContent = "总退款金额: សរុបទឹកប្រាក់ត្រូវសងត្រលប់ " + result.toFixed(2);
     }
+    
 }
 
 //subtotal
