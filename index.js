@@ -133,6 +133,7 @@ function calculate5() {
 
     resultSpan.textContent = "សួស្តីបង សរុបហាងទំនិញទាំងអស់ " + "￥"+  num.value + " ចែក 6.8 = " + (cal).toFixed(2) + "$"
 }
+
 //promotion1
 total = () => {
     var p = document.getElementById("price").valueAsNumber;
@@ -213,6 +214,16 @@ function copyText(elementId) {
         document.body.removeChild(tempTextarea);
     }
 }
+
+subTotal1 = () => {
+    var p = parseFloat(document.getElementById("p").value);
+    var p1 = parseFloat(document.getElementById("p1").value);
+    var p2 = parseFloat(document.getElementById("p2").value);
+    var subtotal = document.getElementById("subtotal");
+    const total = p + p1 + p2;
+    subtotal.textContent = "Subtotal: " + total;
+}
+
 
 
 
