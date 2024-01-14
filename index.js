@@ -143,7 +143,7 @@ total = () => {
      "\n " + "\n***បញ្ជាក់: ចំពោះទំនិញទិញក្នុងហាងតែមួយ ប្រសិនខាងហាងបំបែកកញ្ចប់ទំនិញ ខាងប្អូននឹងរាប់កញ្ចប់ទំនិញគិតថ្លៃដឹកតាមចំនួនកញ្ចប់ទំនិញដូចគ្នា សំរាប់កញ្ចប់ដែលក្រោម1គីឡូ ខាងប្អូនគិតមួយគីឡូ លើស1គីឡូយក ទំហំនិង ទម្ងង់ប្រៀបធៀបគ្នាមួយណាធំជាងយកមួយនឹងជាគោលគិតថ្លៃដឹកជញ្ចូន"+ "\n" + "\nចំពោះសេវាជួយទិញគឺមិនមានការបង្រួមកញ្ចប់ទំនិញទេបង"
 }
 // total
-function subtotal() {
+const subtotal = () => {
     var n = document.getElementById("n").valueAsNumber;
     var n1 = document.getElementById("n1").valueAsNumber;
     var calculate;
@@ -155,11 +155,25 @@ function subtotal() {
         document.getElementById("r1").textContent = "";
     } else {
         calculate = n1 - n;
-        document.getElementById("r1").textContent = "总退款金额: សរុបទឹកប្រាក់ត្រូវសងត្រលប់ " + calculate +"$";
+        document.getElementById("r1").textContent = "总退款金额: សរុបទឹកប្រាក់ត្រូវសងត្រលប់ " + calculate + "$";
         // Clear the content of the other span
         document.getElementById("r").textContent = "";
     }
+
+    // Move to the next input field or show result (adjust the IDs accordingly)
+    document.getElementById("n1").focus();
+    // or display the result
+    // document.getElementById("result").textContent = "Your Result: " + calculate;
 }
+
+const handleKeyPress = (event, nextInputId, resultId) => {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // prevent the default behavior of the Enter key
+        subtotal();
+    }
+}
+
+//copy text in total function
 function copyText1() {
     var n = document.getElementById("n").value;
     var n1 = document.getElementById("n1").value;

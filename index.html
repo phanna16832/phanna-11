@@ -17,11 +17,10 @@
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Freehand&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@300&family=Suwannaphum:wght@300&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Freehand';
+      font-family: 'Suwannaphum', serif';
     }
 
     button {
@@ -192,6 +191,43 @@ https://t.me/+zaVpyk9lVlI2YmU1
     <button type="button" class="btn btn-primary btn-sm" onclick="copyText('pretext3')">copy</button>
   </div>
 
+  <!-- total-->
+  <div class="classcontent">
+    <div class="text">
+      <h4>Updated promotion CE Chuytinh on 07/01 - 31/01</h4>
+      <label>តម្លៃទំនិញ: </label>
+      <input type="number" id="price"><br><br>
+      <span id="result"></span><br><br>
+      <button onclick="total()">Calculate</button>
+      <button onclick="copyText('result')">Copy</button>
+    </div>
+    
+    <div class="recalculate">
+      <label>新订单总额: សរុបទឹកប្រាក់កុម្ម៉ង់ថ្មី: </label>
+      <input type="number" id="n" onkeydown="handleKeyPress(event, 'n1', 'result')"><br><br>
+      <label>总退款: សរុបទឹកប្រាក់សងត្រលប់: </label>
+      <input type="number" id="n1" onkeydown="handleKeyPress(event, 'result', 'copyButton')"><br><br>
+      <span id="r"></span>
+      <span id="r1"></span>
+      <button onclick="subtotal()">គណនា</button>
+      <button id="copyButton" onclick="copyText1()">ចម្លង</button>
+  </div>
+  
+  <div class="subtotal1">
+      <label>ថ្លៃទំនិញ1</label>
+      <input type="number" id="p"><br><br>
+
+      <label>ថ្លៃទំនិញ2</label>
+      <input type="number" id="p1"><br><br>
+
+      <label>ថ្លៃទំនិញ3</label>
+      <input type="number" id="p2"><br><br>
+
+      <span id="subtotal"></span>
+      <button onclick="subTotal1()">Calculate</button>
+    </div>
+  </div>
+
   <!--rate-->
   <table class="table">
     <thead>
@@ -271,39 +307,6 @@ https://t.me/+zaVpyk9lVlI2YmU1
 
     </tbody>
   </table>
-  <div class="classcontent">
-    <div class="text">
-      <h4>Updated promotion CE Chuytinh on 07/01 - 31/01</h4>
-      <label>តម្លៃទំនិញ: </label>
-      <input type="number" id="price"><br><br>
-      <span id="result"></span><br><br>
-      <button onclick="total()">Calculate</button>
-      <button onclick="copyText('result')">Copy</button>
-    </div>
-    <div class="recalculate"> <!-- r =result n= number-->
-      <label>新订单总额: សរុបទឹកប្រាក់កុម្ម៉ង់ថ្មី: </label>
-      <input type="number" id="n"><br><br>
-      <label>总退款: សរុបទឹកប្រាក់សងត្រលប់: </label>
-      <input type="number" id="n1"><br><br>
-      <span id="r"></span>
-      <span id="r1"></span>
-      <button onclick="subtotal()">គណនា</button>
-      <button onclick="copyText1()">ចម្លង</button>
-    </div>
-    <div class="subtotal1">
-      <label>ថ្លៃទំនិញ1</label>
-      <input type="number" id="p"><br><br>
-
-      <label>ថ្លៃទំនិញ2</label>
-      <input type="number" id="p1"><br><br>
-
-      <label>ថ្លៃទំនិញ3</label>
-      <input type="number" id="p2"><br><br>
-
-      <span id="subtotal"></span>
-      <button onclick="subTotal1()">Calculate</button>
-    </div>
-  </div>
   <footer>
     <pre>
     &copy; this website is created for practice code only
