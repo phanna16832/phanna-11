@@ -199,6 +199,54 @@ function copyText1() {
     }
 }
 
+subTotal1 = () => {
+    var p = parseFloat(document.getElementById("p").value);
+    var p1 = parseFloat(document.getElementById("p1").value);
+    var p2 = parseFloat(document.getElementById("p2").value);
+    var subtotal = document.getElementById("subtotal");
+    const total = p + p1 + p2;
+    subtotal.textContent = "Subtotal: " + total;
+}
+
+//涨价
+var n0 = document.getElementById("number0");
+var n00 = document.getElementById("number00");
+var result0 = document.getElementById("result0");
+
+subTotal0 = () => {
+  if (n0.value > n00.value) {
+    const cal0 = n0.value - n00.value;
+    result0.textContent = "តម្លៃដែលទូទាត់បន្ថែម: " + cal0;
+  } else {
+    const cal0 = n00.value - n0.value;
+    result0.textContent = "ទឹកប្រាក់ដែលបង្វិលត្រលប់ទៅវិញ: " + cal0;
+  }
+};
+//copy text in 涨价functon
+function copyText3() {
+    var input1 = document.getElementById("number0");
+    var input2 = document.getElementById("number00");
+    var result = document.getElementById("result0");
+
+    // Create a temporary textarea
+    var textarea = document.createElement("textarea");
+    textarea.value = "តម្លៃទំនិញ: " + input1.value +"$" + "\nទឹកប្រាក់ដែលបានទូទាត់:  " + input2.value + "$" + "\n" + result.textContent +"$";
+
+    // Append the textarea to the document
+    document.body.appendChild(textarea);
+
+    // Select and copy the text from the textarea
+    textarea.select();
+    document.execCommand("copy");
+
+    // Remove the temporary textarea from the document
+    document.body.removeChild(textarea);
+
+    // Optionally, you can provide some visual feedback to the user
+    alert("Text copied to clipboard!");
+}
+
+
 //copy text
 function copyText(elementId) {
     var element = document.getElementById(elementId);
@@ -227,15 +275,6 @@ function copyText(elementId) {
     } finally {
         document.body.removeChild(tempTextarea);
     }
-}
-
-subTotal1 = () => {
-    var p = parseFloat(document.getElementById("p").value);
-    var p1 = parseFloat(document.getElementById("p1").value);
-    var p2 = parseFloat(document.getElementById("p2").value);
-    var subtotal = document.getElementById("subtotal");
-    const total = p + p1 + p2;
-    subtotal.textContent = "Subtotal: " + total;
 }
 
 
