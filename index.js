@@ -14,7 +14,7 @@ function performSearch(event) {
             { title: "Telegram", file: "telegramSave reply.html" },
             { title: "CCSL", file: "ccsl.html"},
             { title: "Fee Calculation", file: "calculate.html"},
-            { title: "Taobao and Pinduoduo", file: "project1.html", img: "taobao1.jpg"},
+            { title: "Taobao and Pinduoduo", file: "project1.html", img: "tb.jpg"},
             { title: "id and CE ID", text: "Password:888888 ID:  លេខទូរសព្ទ័: 0 ", file: "#" }  
             // Add more results as needed
         ];
