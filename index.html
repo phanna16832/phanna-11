@@ -234,11 +234,13 @@ https://t.me/+zaVpyk9lVlI2YmU1
       <input type="number" id="price-1" onkeydown="if (event.keyCode === 13) total()"><br><br>
       <span id="result-1"></span><br><br>
       <button onclick="total()">Calculate</button>
+      <button onclick="copyText('result-1')">Copy</button>
+
     </div>
     
     <div class="recalculate">
       <label>新订单总额: សរុបទឹកប្រាក់កុម្ម៉ង់ថ្មី: </label>
-      <input type="number" id="n" onkeydown="handleKeyPress(event, 'n1', 'result')"><br><br>
+      <input type="number" id="n" onkeydown="handleKeyPress(event, 'n1')"><br><br>
       <label>总退款: សរុបទឹកប្រាក់សងត្រលប់: </label>
       <input type="number" id="n1" onkeydown="handleKeyPress(event, 'result', 'copyButton')"><br><br>
       <span id="r"></span>
