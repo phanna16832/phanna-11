@@ -254,18 +254,18 @@ https://t.me/+zaVpyk9lVlI2YmU1
   </div>
   
   <div class="subtotal1">
-      <label>ថ្លៃទំនិញ1</label>
-      <input type="number" id="p"><br><br>
+    <label>ថ្លៃទំនិញ1</label>
+    <input type="number" id="p" onkeypress="moveToNext(event, 'p1')"><br><br>
 
-      <label>ថ្លៃទំនិញ2</label>
-      <input type="number" id="p1"><br><br>
+    <label>ថ្លៃទំនិញ2</label>
+    <input type="number" id="p1" onkeypress="moveToNext(event, 'p2')"><br><br>
 
-      <label>ថ្លៃទំនិញ3</label>
-      <input type="number" id="p2"><br><br>
+    <label>ថ្លៃទំនិញ3</label>
+    <input type="number" id="p2" onkeypress="moveToNext(event, 'subtotal')"><br><br>
 
-      <span id="subtotal"></span>
-      <button onclick="subTotal1()">Calculate</button>
-    </div>
+    <span id="subtotal"></span>
+    <button onclick="subTotal1()">Calculate</button>
+</div>
 
     <div id="sbtotal2">
       <h4 style="background-color: #0000cc;">ទូទាត់ទំនិញហាងឡើងថ្លៃ ឬ ចុះថ្លៃ</h4>
@@ -276,7 +276,6 @@ https://t.me/+zaVpyk9lVlI2YmU1
       <p id="result0"></p>
       <button onclick="subTotal0()">Calculate</button>
       <button id="copyButton" onclick="copyText3()">Copy</button>
-  </div>
   </div>
 
   <!--rate-->

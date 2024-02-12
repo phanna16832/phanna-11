@@ -217,31 +217,60 @@ function copyText1() {
         console.error("Clipboard API not supported:", err);
     }
 }
+//subtotal1
 
-subTotal1 = () => {
-    var p = parseFloat(document.getElementById("p").value);
-    var p1 = parseFloat(document.getElementById("p1").value);
-    var p2 = parseFloat(document.getElementById("p2").value);
-    var subtotal = document.getElementById("subtotal");
-    const total = p + p1 + p2;
-    subtotal.textContent = "Subtotal: " + total;
-}
+ function moveToNext(event, nextFieldId) {
+        if (event.key === "Enter") {
+            document.getElementById(nextFieldId).focus();
+        }
+    }
+
+    subTotal1 = () => {
+        var p = parseFloat(document.getElementById("p").value);
+        var p1 = parseFloat(document.getElementById("p1").value);
+        var p2 = parseFloat(document.getElementById("p2").value);
+        var subtotal = document.getElementById("subtotal");
+
+        // Validate input and convert non-numeric values to zero
+        p = isNaN(p) ? 0 : p;
+        p1 = isNaN(p1) ? 0 : p1;
+        p2 = isNaN(p2) ? 0 : p2;
+
+        // Calculate subtotal
+        const total = (p + p1 + p2).toFixed(2);
+        subtotal.textContent = "Subtotal: " + total;
+    }
 
 //涨价
-var n0 = document.getElementById("number0");
-var n00 = document.getElementById("number00");
-var result0 = document.getElementById("result0");
+document.addEventListener("DOMContentLoaded", function() {
+    var n0 = document.getElementById("number0");
+    var n00 = document.getElementById("number00");
+    var result0 = document.getElementById("result0");
 
-subTotal0 = () => {
-  if (n0.value > n00.value) {
-    const cal0 = n0.value - n00.value;
-    result0.textContent = "តម្លៃដែលទូទាត់បន្ថែម: " + cal0;
-  } 
-  else {
-    const cal0 = n00.value - n0.value;
-    result0.textContent = "ទឹកប្រាក់ដែលបង្វិលត្រលប់ទៅវិញ: " + cal0;
-  }
-};
+    // Add event listener for 'keypress' event on input fields
+    n0.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            n00.focus(); // Move focus to the next input field
+        }
+    });
+
+    n00.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            subTotal0(); // Calculate subtotal when Enter is pressed on the second input
+        }
+    });
+
+    subTotal0 = () => {
+        if (n0.value > n00.value) {
+            const cal0 = (n0.value - n00.value).toFixed(2);
+            result0.textContent = "តម្លៃដែលត្រូវទូទាត់បន្ថែម: " + cal0;
+        } 
+        else {
+            const cal0 = (n00.value - n0.value).toFixed(2);
+            result0.textContent = "ទឹកប្រាក់ដែលបង្វិលត្រលប់ទៅវិញ: " + cal0;
+        }
+    };
+});
 //copy text in 涨价functon
 function copyText3() {
     var input1 = document.getElementById("number0");
