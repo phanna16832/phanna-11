@@ -224,23 +224,76 @@ function copyText1() {
             document.getElementById(nextFieldId).focus();
         }
     }
-
-    subTotal1 = () => {
+    const subTotal1 = () => { // Changed from arrow function to function declaration for better compatibility
         var p = parseFloat(document.getElementById("p").value);
         var p1 = parseFloat(document.getElementById("p1").value);
         var p2 = parseFloat(document.getElementById("p2").value);
         var subtotal = document.getElementById("subtotal");
-
+    
         // Validate input and convert non-numeric values to zero
         p = isNaN(p) ? 0 : p;
         p1 = isNaN(p1) ? 0 : p1;
         p2 = isNaN(p2) ? 0 : p2;
-
+    
         // Calculate subtotal
         const total = (p + p1 + p2).toFixed(2);
         subtotal.textContent = "Subtotal: " + total;
     }
+    
+    const copyText = (elementId) => {
+        var textElement = document.getElementById(elementId);
+        var text = textElement.textContent;
+    
+        // Create a temporary input element
+        var tempInput = document.createElement('textarea');
+        tempInput.value = text;
+        document.body.appendChild(tempInput);
+    
+        // Select the text in the input element
+        tempInput.select();
+        tempInput.setSelectionRange(0, 99999); // For mobile devices
+    
+        // Copy the selected text
+        document.execCommand('copy');
+        console.log('Content copied to clipboard');
+    
+        // Remove the temporary input element
+        document.body.removeChild(tempInput);
+    }
+    
+    // Function to move focus to the next input field on Enter press
+    const moveToNext = (event, nextInputId) => {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById(nextInputId).focus();
+        }
+    }
+    
 
+    function copyText1() {
+    var n = document.getElementById("n").value;
+    var n1 = document.getElementById("n1").value;
+    var resultElement = document.getElementById("r");
+    var resultElement1 = document.getElementById("r1");
+    var resultText = resultElement.textContent;
+    var resultText1 = resultElement1.textContent;
+
+    // Combine input values and result text
+    var textToCopy = "新订单总额: សរុបទឹកប្រាក់កុម្ម៉ង់ថ្មី:" + n + "$" + "\n总退款: សរុបទឹកប្រាក់សងត្រលប់: " + n1 + "$" + "\n" + resultText + "\n" + resultText1;
+
+    try {
+        // Use the Clipboard API to copy the text
+        navigator.clipboard.writeText(textToCopy)
+            .then(function() {
+                // Alert or notify the user (optional)
+            })
+            .catch(function(err) {
+                console.error("Unable to copy to clipboard:", err);
+            });
+    } catch (err) {
+        console.error("Clipboard API not supported:", err);
+    }
+}
 //涨价
 document.addEventListener("DOMContentLoaded", function() {
     var n0 = document.getElementById("number0");
