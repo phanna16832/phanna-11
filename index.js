@@ -61,93 +61,14 @@ function clearResults() {
     var searchResultsContainer = document.getElementById('searchResults');
     searchResultsContainer.innerHTML = '';
 }
-
-
-//calcultion
-function calculate() {
-    var num = document.getElementById("num");
-    var resultSpan = document.getElementById("pretext4");
-
-    // Ternary operator
-    var cal = num.valueAsNumber > 300
-        ? "ទឹកប្រាក់លើសពី 300"
-        : "សួស្តីបង សរុបហាងទំនិញទាំងអស់" + num.value +"￥"+ " ចែក 6 = " + (num.valueAsNumber / 6).toFixed(2) + "$";
-
-    resultSpan.textContent = cal;
-}
-//6.1
-function calculate1() {
-    var num = document.getElementById("num1");
-    var resultSpan = document.getElementById("pretext5");
-
-    // Ternary operator
-    var cal = num.valueAsNumber >= 310 && num.valueAsNumber <= 610
-        ? "សួស្តីបង សរុបហាងទំនិញទាំងអស់ " + num.value + "  ចែក 6.1= $ " + (num.valueAsNumber / 6.1).toFixed(2)
-        : "ក្រោម 300 ￥ នឹង​លើស​ 610  ￥";
-
-    resultSpan.textContent = cal;
-}
-// 6.2
-function calculate2() {
-    var num = document.getElementById("num2");
-    var resultSpan = document.getElementById("pretext6");
-
-    // Ternary operator
-    var cal = num.valueAsNumber >= 620 && num.valueAsNumber <= 6200
-        ? "សួស្តីបង សរុបហាងទំនិញទាំងអស់ " + num.value + " ចែក 6.2= " + (num.valueAsNumber / 6.2).toFixed(2) + "$"
-        : "តម្លៃទំនិញតូចជាង 620￥ ឬ ច្រើនជាង6200￥ ";
-
-    resultSpan.textContent = cal;
-}
-
-// 6.4
-function calculate3() {
-    var num = document.getElementById("num3");
-    var resultSpan = document.getElementById("pretext7");
-
-    // Ternary operator
-    var cal = num.valueAsNumber >= 6310
-        ?  "សួស្តីបង សរុបហាងទំនិញទាំងអស់ " + "￥"+  num.value + " ចែក 6.4 = " + (num.valueAsNumber / 6.4).toFixed(2) + "$"
-        : "តម្លៃទំនិញតូចជាង 6310￥ ";
-
-    resultSpan.textContent = cal;
-}
-//promotion
-function calculate4() {
-    var num = document.getElementById("num4");
-    var resultSpan = document.getElementById("pretext8");
-
-    // Ternary operator
-    var cal = num.valueAsNumber /6.4
-
-    resultSpan.textContent = "Promotion អត្រាប្តូរប្រាក់ពិសេសទៅដល់ 6.4¥ ចាប់ពីថ្ងៃទី 7 រហូតដល់ 31 មករា 2024 សួស្តីបង សរុបហាងទំនិញទាំងអស់" +"￥"+  num.value + " ចែក 6.8 = " + (cal).toFixed(2) + "$"
-}
-
-// vip 6.8
-function calculate5() {
-    var num = document.getElementById("num5");
-    var resultSpan = document.getElementById("pretext9");
-
-    // Ternary operator
-    var cal = num.valueAsNumber /6.8
-
-    resultSpan.textContent = "សួស្តីបង សរុបហាងទំនិញទាំងអស់ " + "￥"+  num.value + " ចែក 6.8 = " + (cal).toFixed(2) + "$"
-}
-
 //promotion1
-function handleEnterKey(event) {
-    if (event.keyCode === 13) {
-      calculatePromotion();
-    }
-  }
-
-  function calculatePromotion() {
+function calculatePromotion() {
     var price = document.getElementById("price").valueAsNumber;
     var result = document.getElementById("result");
-    var promotionRate = 6.35;
+    var promotionRate = 6;
     var calculatedPrice = (price / promotionRate).toFixed(2);
     
-    result.textContent = "Promotion អត្រាប្តូរប្រាក់ សម្រាប់ទិវានៃក្ដីស្រឡាញ់ អត្រាប្តូរប្រាក់ 6.35 ពីថ្ងៃទី14-ដល់ថ្ងៃទី21"+ "\nសួស្តីបង សរុបហាងទំនិញទាំងអស់" +"￥"+  price + " ចែក 6.35 = "  + calculatedPrice + "$" +"\n" + "\n***បញ្ជាក់: ចំពោះទំនិញទិញក្នុងហាងតែមួយ ប្រសិនខាងហាងបំបែកកញ្ចប់ទំនិញ ខាងប្អូននឹងរាប់កញ្ចប់ទំនិញគិតថ្លៃដឹកតាមចំនួនកញ្ចប់ទំនិញដូចគ្នា សំរាប់កញ្ចប់ដែលក្រោម1គីឡូ ខាងប្អូនគិតមួយគីឡូ លើស1គីឡូយក ទំហំនិង ទម្ងង់ប្រៀបធៀបគ្នាមួយណាធំជាងយកមួយនឹងជាគោលគិតថ្លៃដឹកជញ្ចូន"
+    result.textContent = "Promotion "+ "\nសួស្តីបង សរុបហាងទំនិញទាំងអស់" +"￥"+  price + " ចែក 6 = "  + calculatedPrice + "$" +"\n" + "\n***បញ្ជាក់: ចំពោះទំនិញទិញក្នុងហាងតែមួយ ប្រសិនខាងហាងបំបែកកញ្ចប់ទំនិញ ខាងប្អូននឹងរាប់កញ្ចប់ទំនិញគិតថ្លៃដឹកតាមចំនួនកញ្ចប់ទំនិញដូចគ្នា សំរាប់កញ្ចប់ដែលក្រោម1គីឡូ ខាងប្អូនគិតមួយគីឡូ លើស1គីឡូយក ទំហំនិង ទម្ងង់ប្រៀបធៀបគ្នាមួយណាធំជាងយកមួយនឹងជាគោលគិតថ្លៃដឹកជញ្ចូន"
     +"\n" + "\n ចំពោះសេវាជួយទិញគឺមិនមានការបង្រួមកញ្ចប់ទំនិញទេបង"
  
 }
@@ -156,8 +77,8 @@ function handleEnterKey(event) {
 total = () => {
     var p = document.getElementById("price-1").valueAsNumber;
     var result = document.getElementById("result-1");
-    var calculate = (p / 6.7).toFixed(2);
-    result.textContent = "Promotion អត្រាប្តូរប្រាក់ពិសេសទៅដល់ 6.7¥ ចាប់ពីថ្ងៃទី 7 រហូតដល់ 31 មករា 2024"+ "\nសួស្តីបង សរុបហាងទំនិញទាំងអស់" +"￥"+  p + " ចែក 6.7 = "  + calculate + "$" +"\n" + "\n***បញ្ជាក់: ចំពោះទំនិញទិញក្នុងហាងតែមួយ ប្រសិនខាងហាងបំបែកកញ្ចប់ទំនិញ ខាងប្អូននឹងរាប់កញ្ចប់ទំនិញគិតថ្លៃដឹកតាមចំនួនកញ្ចប់ទំនិញដូចគ្នា សំរាប់កញ្ចប់ដែលក្រោម1គីឡូ ខាងប្អូនគិតមួយគីឡូ លើស1គីឡូយក ទំហំនិង ទម្ងង់ប្រៀបធៀបគ្នាមួយណាធំជាងយកមួយនឹងជាគោលគិតថ្លៃដឹកជញ្ចូន"
+    var calculate = (p / 6.3).toFixed(2);
+    result.textContent = "រីករាយទិវាសិទ្ធនារី អត្រា 6.30 (ចាប់ពីថ្ងៃទី 01 ដល់ថ្ងៃទី 15)  "+ "\nសួស្តីបង សរុបហាងទំនិញទាំងអស់" +"￥"+  p + " ចែក 6.3 = "  + calculate + "$" +"\n" + "\n***បញ្ជាក់: ចំពោះទំនិញទិញក្នុងហាងតែមួយ ប្រសិនខាងហាងបំបែកកញ្ចប់ទំនិញ ខាងប្អូននឹងរាប់កញ្ចប់ទំនិញគិតថ្លៃដឹកតាមចំនួនកញ្ចប់ទំនិញដូចគ្នា សំរាប់កញ្ចប់ដែលក្រោម1គីឡូ ខាងប្អូនគិតមួយគីឡូ លើស1គីឡូយក ទំហំនិង ទម្ងង់ប្រៀបធៀបគ្នាមួយណាធំជាងយកមួយនឹងជាគោលគិតថ្លៃដឹកជញ្ចូន"
     +"\n" + "\n ចំពោះសេវាជួយទិញគឺមិនមានការបង្រួមកញ្ចប់ទំនិញទេបង"
   }
 
@@ -217,113 +138,48 @@ function copyText1() {
         console.error("Clipboard API not supported:", err);
     }
 }
-//subtotal1
 
- function moveToNext(event, nextFieldId) {
-        if (event.key === "Enter") {
-            document.getElementById(nextFieldId).focus();
-        }
-    }
-    const subTotal1 = () => { // Changed from arrow function to function declaration for better compatibility
-        var p = parseFloat(document.getElementById("p").value);
-        var p1 = parseFloat(document.getElementById("p1").value);
-        var p2 = parseFloat(document.getElementById("p2").value);
-        var subtotal = document.getElementById("subtotal");
-    
-        // Validate input and convert non-numeric values to zero
-        p = isNaN(p) ? 0 : p;
-        p1 = isNaN(p1) ? 0 : p1;
-        p2 = isNaN(p2) ? 0 : p2;
-    
-        // Calculate subtotal
-        const total = (p + p1 + p2).toFixed(2);
-        subtotal.textContent = "Subtotal: " + total;
-    }
-    
-    const copyText = (elementId) => {
-        var textElement = document.getElementById(elementId);
-        var text = textElement.textContent;
-    
-        // Create a temporary input element
-        var tempInput = document.createElement('textarea');
-        tempInput.value = text;
-        document.body.appendChild(tempInput);
-    
-        // Select the text in the input element
-        tempInput.select();
-        tempInput.setSelectionRange(0, 99999); // For mobile devices
-    
-        // Copy the selected text
-        document.execCommand('copy');
-        console.log('Content copied to clipboard');
-    
-        // Remove the temporary input element
-        document.body.removeChild(tempInput);
-    }
-    
-    // Function to move focus to the next input field on Enter press
-    const moveToNext = (event, nextInputId) => {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            document.getElementById(nextInputId).focus();
-        }
-    }
-    
+const subTotal1 = () => {
+    var p = parseFloat(document.getElementById("p").value) || 0;
+    var p1 = parseFloat(document.getElementById("p1").value) || 0;
+    var p2 = parseFloat(document.getElementById("p2").value) || 0;
+    var subtotal = document.getElementById("subtotal");
+    const total = p + p1 + p2;
+    subtotal.textContent = "Subtotal: " + total.toFixed(2);
+}
 
-    function copyText1() {
-    var n = document.getElementById("n").value;
-    var n1 = document.getElementById("n1").value;
-    var resultElement = document.getElementById("r");
-    var resultElement1 = document.getElementById("r1");
-    var resultText = resultElement.textContent;
-    var resultText1 = resultElement1.textContent;
-
-    // Combine input values and result text
-    var textToCopy = "新订单总额: សរុបទឹកប្រាក់កុម្ម៉ង់ថ្មី:" + n + "$" + "\n总退款: សរុបទឹកប្រាក់សងត្រលប់: " + n1 + "$" + "\n" + resultText + "\n" + resultText1;
-
-    try {
-        // Use the Clipboard API to copy the text
-        navigator.clipboard.writeText(textToCopy)
-            .then(function() {
-                // Alert or notify the user (optional)
-            })
-            .catch(function(err) {
-                console.error("Unable to copy to clipboard:", err);
-            });
-    } catch (err) {
-        console.error("Clipboard API not supported:", err);
+const moveToNext = (event, nextInputId) => {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById(nextInputId).focus();
     }
 }
+//copy content in subtotal1
+const copyContent = () => {
+    var contentToCopy = document.querySelector('.subtotal1');
+    var range = document.createRange();
+    range.selectNode(contentToCopy);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand('copy');
+    window.getSelection().removeAllRanges();
+    alert('Content copied!');
+}
 //涨价
-document.addEventListener("DOMContentLoaded", function() {
-    var n0 = document.getElementById("number0");
-    var n00 = document.getElementById("number00");
-    var result0 = document.getElementById("result0");
+var n0 = document.getElementById("number0");
+var n00 = document.getElementById("number00");
+var result0 = document.getElementById("result0");
 
-    // Add event listener for 'keypress' event on input fields
-    n0.addEventListener("keypress", function(event) {
-        if (event.key === "Enter") {
-            n00.focus(); // Move focus to the next input field
-        }
-    });
-
-    n00.addEventListener("keypress", function(event) {
-        if (event.key === "Enter") {
-            subTotal0(); // Calculate subtotal when Enter is pressed on the second input
-        }
-    });
-
-    subTotal0 = () => {
-        if (n0.value > n00.value) {
-            const cal0 = (n0.value - n00.value).toFixed(2);
-            result0.textContent = "តម្លៃដែលត្រូវទូទាត់បន្ថែម: " + cal0;
-        } 
-        else {
-            const cal0 = (n00.value - n0.value).toFixed(2);
-            result0.textContent = "ទឹកប្រាក់ដែលបង្វិលត្រលប់ទៅវិញ: " + cal0;
-        }
-    };
-});
+subTotal0 = () => {
+  if (n0.value > n00.value) {
+    const cal0 = n0.value - n00.value;
+    result0.textContent = "តម្លៃដែលទូទាត់បន្ថែម: " + cal0;
+  } 
+  else {
+    const cal0 = n00.value - n0.value;
+    result0.textContent = "ទឹកប្រាក់ដែលបង្វិលត្រលប់ទៅវិញ: " + cal0;
+  }
+};
 //copy text in 涨价functon
 function copyText3() {
     var input1 = document.getElementById("number0");

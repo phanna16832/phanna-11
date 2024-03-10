@@ -29,6 +29,52 @@ function search() {
     resultDiv.innerHTML = '<p>No results found.</p>';
   }
 }
+
+//cpy text and img
+function copyImageAndText() {
+  // Copy image
+  var imageSrc = document.getElementById('image').src;
+  navigator.clipboard.write([
+      new ClipboardItem({
+          'image/png': new Blob([imageSrc], { type: 'image/png' })
+      })
+  ]).then(function() {
+      console.log('Image copied successfully');
+  }, function(error) {
+      console.error('Unable to copy image: ', error);
+  });
+
+  // Copy text
+  var textToCopy = document.getElementById('pretext2').innerText;
+  navigator.clipboard.writeText(textToCopy).then(function() {
+      console.log('Text copied successfully');
+  }, function(error) {
+      console.error('Unable to copy text: ', error);
+  });
+}
+//copy img and text
+function copyImageAndText() {
+  // Copy image
+  var imageSrc = document.getElementById('image').src;
+  // Fetch the text content
+  var textToCopy = document.getElementById('pretext2').innerText;
+
+  // Create ClipboardItems for image and text
+  var imageItem = new ClipboardItem({ 'image/png': new Blob([imageSrc], { type: 'image/png' }) });
+  var textItem = new ClipboardItem({ 'text/plain': new Blob([textToCopy], { type: 'text/plain' }) });
+
+  // Write both items to the clipboard
+  navigator.clipboard.write([imageItem, textItem])
+      .then(function() {
+          console.log('Image and Text copied successfully');
+      })
+      .catch(function(error) {
+          console.error('Unable to copy Image and Text: ', error);
+      });
+}
+
+
+
 //copy text button//
 function copyText(elementId) {
   var textElement = document.getElementById(elementId);
