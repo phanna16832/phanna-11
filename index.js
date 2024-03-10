@@ -173,11 +173,11 @@ var result0 = document.getElementById("result0");
 subTotal0 = () => {
   if (n0.value > n00.value) {
     const cal0 = n0.value - n00.value;
-    result0.textContent = "តម្លៃដែលទូទាត់បន្ថែម: " + cal0;
+    result0.textContent = "តម្លៃដែលទូទាត់បន្ថែម: " + cal0.toFixed(2);
   } 
   else {
     const cal0 = n00.value - n0.value;
-    result0.textContent = "ទឹកប្រាក់ដែលបង្វិលត្រលប់ទៅវិញ: " + cal0;
+    result0.textContent = "ទឹកប្រាក់ដែលបង្វិលត្រលប់ទៅវិញ: " + cal0.toFixed(2);
   }
 };
 //copy text in 涨价functon

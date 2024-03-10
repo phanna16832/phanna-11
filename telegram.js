@@ -29,52 +29,6 @@ function search() {
     resultDiv.innerHTML = '<p>No results found.</p>';
   }
 }
-
-//cpy text and img
-function copyImageAndText() {
-  // Copy image
-  var imageSrc = document.getElementById('image').src;
-  navigator.clipboard.write([
-      new ClipboardItem({
-          'image/png': new Blob([imageSrc], { type: 'image/png' })
-      })
-  ]).then(function() {
-      console.log('Image copied successfully');
-  }, function(error) {
-      console.error('Unable to copy image: ', error);
-  });
-
-  // Copy text
-  var textToCopy = document.getElementById('pretext2').innerText;
-  navigator.clipboard.writeText(textToCopy).then(function() {
-      console.log('Text copied successfully');
-  }, function(error) {
-      console.error('Unable to copy text: ', error);
-  });
-}
-//copy img and text
-function copyImageAndText() {
-  // Copy image
-  var imageSrc = document.getElementById('image').src;
-  // Fetch the text content
-  var textToCopy = document.getElementById('pretext2').innerText;
-
-  // Create ClipboardItems for image and text
-  var imageItem = new ClipboardItem({ 'image/png': new Blob([imageSrc], { type: 'image/png' }) });
-  var textItem = new ClipboardItem({ 'text/plain': new Blob([textToCopy], { type: 'text/plain' }) });
-
-  // Write both items to the clipboard
-  navigator.clipboard.write([imageItem, textItem])
-      .then(function() {
-          console.log('Image and Text copied successfully');
-      })
-      .catch(function(error) {
-          console.error('Unable to copy Image and Text: ', error);
-      });
-}
-
-
-
 //copy text button//
 function copyText(elementId) {
   var textElement = document.getElementById(elementId);
@@ -94,4 +48,83 @@ function copyText(elementId) {
 
   // Remove the temporary input element
   document.body.removeChild(tempInput);
+}
+// Function to copy image to the clipboard
+async function copyToClipboard(imageSrc) {
+  try {
+      // Create a new image element
+      const img = new Image();
+      // When the image is loaded, create a clipboard item with the image
+      img.onload = async function() {
+          try {
+              const imageBlob = await loadImageToBlob(img);
+              // Write the image blob to the clipboard
+              await navigator.clipboard.write([
+                  new ClipboardItem({ 'image/png': imageBlob })
+              ]);
+              alert("Image copied successfully!");
+          } catch (error) {
+              alert("Failed to copy image: " + error);
+          }
+      };
+      img.src = imageSrc;
+  } catch (error) {
+      alert("Failed to copy image: " + error);
+  }
+}
+
+//copy image
+function copyImageToClipboard(imageId) {
+  var imgElement = document.getElementById(imageId);
+  var imgSrc = imgElement.src;
+  
+  try {
+      // Copy image to clipboard
+      navigator.clipboard.write([new ClipboardItem({ "image/png": imgElement })])
+          .then(function() {
+              alert("Image copied successfully!");
+          })
+          .catch(function(err) {
+              console.error("Unable to copy image to clipboard:", err);
+          });
+  } catch (err) {
+      console.error("Clipboard API not supported:", err);
+  }
+}
+
+//air// 
+function air() {
+  var track = document.getElementById("Track").value; // Corrected ID to "Track" and using .value to get input value
+  var textToCopy = `សួស្តីបងចំពោះទំនិញនេះដែរខាងប្អូនសូមរំខានបងជួយធ្វើការស្នើរដឹកតាមផ្លូវអាកាសណាបងជៀសវាងទំនិញចូលតាមផ្លូវគោក \nលេខបញ្ជាទិញឆាប់រហ័ស : \t${track} \nឈ្មោះទំនិញអាចសរសេរជាភាសាខ្មែរបានណាបង \n\nតម្លៃទំនិញ  （ ￥)`;
+
+  try {
+      // Use the Clipboard API to copy the text
+      navigator.clipboard.writeText(textToCopy)
+          .then(function() {
+              alert("Text copied successfully!");
+          })
+          .catch(function(err) {
+              console.error("Unable to copy to clipboard:", err);
+          });
+  } catch (err) {
+      console.error("Clipboard API not supported:", err);
+  }
+}
+
+function copyImageToClipboard(imageId) {
+  var imgElement = document.getElementById(imageId);
+  var imgSrc = imgElement.src;
+  
+  try {
+      // Copy image to clipboard
+      navigator.clipboard.write([new ClipboardItem({ "image/png": imgElement })])
+          .then(function() {
+              alert("Image copied successfully!");
+          })
+          .catch(function(err) {
+              console.error("Unable to copy image to clipboard:", err);
+          });
+  } catch (err) {
+      console.error("Clipboard API not supported:", err);
+  }
 }
