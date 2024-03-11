@@ -73,24 +73,7 @@ async function copyToClipboard(imageSrc) {
   }
 }
 
-//copy image
-function copyImageToClipboard(imageId) {
-  var imgElement = document.getElementById(imageId);
-  var imgSrc = imgElement.src;
-  
-  try {
-      // Copy image to clipboard
-      navigator.clipboard.write([new ClipboardItem({ "image/png": imgElement })])
-          .then(function() {
-              alert("Image copied successfully!");
-          })
-          .catch(function(err) {
-              console.error("Unable to copy image to clipboard:", err);
-          });
-  } catch (err) {
-      console.error("Clipboard API not supported:", err);
-  }
-}
+
 
 //air// 
 function air() {
