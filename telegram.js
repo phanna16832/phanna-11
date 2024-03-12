@@ -74,6 +74,26 @@ async function copyToClipboard(imageSrc) {
 }
 
 
+//owner less
+ownerLess = () => {
+  var track1 = document.getElementById("oTrack").value; // Getting the value of the input field
+  
+  var textToCopy = "សួស្តីបងចំពោះទំនិញមួយដែលខាងប្អូនឆែកទៅឃើញថាជាប្រភេទទំនិញខ្វះព័ត៌មានពីព្រោះអាចដោយសារខាងហាងគាត់បានដាក់បិទព័ត៌មានអ្នកទទួលនៅលើក្រដាស់ label បុងទំនិញចិន ទើបខាងឃ្លាំងចិនដាក់ទំនិញនេះជាទំនិញខ្វះព័ត៌មានដូចនេះខាងប្អូនសូមរំខានបងជួយស្នើលេខកូដនេះក្នុងអេប CE EXpress-CN" + "\n\nដោយជួរទី1បងជួយដាក់ : " + track1 + "\nជួរទី2បងជួយដាក់ឈ្មោះទំនិញជាភាសាខ្មែរឬអង់គ្លេសក៏បាន";
+
+  try {
+    navigator.clipboard.writeText(textToCopy)
+      .then(function() {
+        alert("Text copied successfully!");
+      })
+      .catch(function(err) {
+        console.error("Unable to copy to clipboard:", err);
+      });
+  } catch (err) {
+    console.error("Clipboard API not supported:", err);
+  }
+}
+
+
 
 //air// 
 function air() {
@@ -94,20 +114,43 @@ function air() {
   }
 }
 
-function copyImageToClipboard(imageId) {
-  var imgElement = document.getElementById(imageId);
-  var imgSrc = imgElement.src;
+//copy img
+function copyImage() {
+  var imgSrc = ["img/air.jpg", "img/ownerless.jpg"];
   
   try {
-      // Copy image to clipboard
-      navigator.clipboard.write([new ClipboardItem({ "image/png": imgElement })])
-          .then(function() {
-              alert("Image copied successfully!");
-          })
-          .catch(function(err) {
-              console.error("Unable to copy image to clipboard:", err);
-          });
+      // Call copyImage to copy the image to the clipboard
+      copyImage(imgSrc);
   } catch (err) {
-      console.error("Clipboard API not supported:", err);
+      console.error("Unable to copy image:", err);
   }
+}
+
+function copyImage(imgSrc) {
+  var img = new Image();
+  img.src = imgSrc;
+  
+  // When the image is loaded, copy it to the clipboard
+  img.onload = function() {
+      var canvas = document.createElement("canvas");
+      var ctx = canvas.getContext("2d");
+      canvas.width = img.width;
+      canvas.height = img.height;
+      ctx.drawImage(img, 0, 0);
+      
+      // Convert canvas content to blob
+      canvas.toBlob(function(blob) {
+          // Create a ClipboardItem with the image blob
+          var item = new ClipboardItem({ "image/png": blob });
+          
+          // Write the ClipboardItem to the clipboard
+          navigator.clipboard.write([item])
+              .then(function() {
+                  alert("Image copied successfully!");
+              })
+              .catch(function(err) {
+                  console.error("Unable to copy image to clipboard:", err);
+              });
+      }, "image/png");
+  };
 }
